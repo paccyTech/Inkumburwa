@@ -39,7 +39,7 @@ const content = {
       },
       {
         id: "festival-inganzo-call-response",
-        src: "/4.jpg",
+        src: "/8.jpg",
         alt: "Festival headliner leading the crowd in song",
         category: "festivals" as const,
         caption: "Intore call-and-response at Inganzo Festival",
@@ -77,7 +77,7 @@ const content = {
       },
       {
         id: "festival-inganzo-call-response",
-        src: "/4.jpg",
+        src: "/8.jpg",
         alt: "Artiste principal menant la foule en chant",
         category: "festivals" as const,
         caption: "Appel-réponse Intore au festival Inganzo",
