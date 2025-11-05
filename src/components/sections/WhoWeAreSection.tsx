@@ -11,7 +11,7 @@ const content = {
     description:
       "Inkumbura z'Ibwanacyambwe is a renowned cultural troupe dedicated to preserving and sharing the vibrancy of traditional Rwandan dance and music. Our passionate performers bring centuries-old traditions to life with authentic choreography, storytelling, and costume design.",
     stats: [
-      { value: "25+", label: "Years of Performances" },
+      { value: "5+", label: "Years of Performances" },
       { value: "300+", label: "Events & Festivals" },
       { value: "50", label: "Talented Artists" },
     ],
