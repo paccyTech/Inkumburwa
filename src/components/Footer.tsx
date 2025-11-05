@@ -21,7 +21,7 @@ export function Footer() {
                 className="h-full w-full object-contain"
               />
             </span>
-            Inkumbura z&apos;Ibwanacyambwe
+            Inkumburwa z&apos;Ibwanacyambwe
           </span>
           <p className="text-sm text-white/80">{t("footer.description")}</p>
         </div>

@@ -17,11 +17,11 @@ const content = {
       "Today, Inkumbura z'Ibwanacyambwe leads cultural education initiatives, performance residencies, and collaborative workshops with schools, museums, and cultural institutions across Africa, Europe, and North America.",
     ],
     highlights: [
-      { number: "1999", label: "Founded" },
+      { number: "2020", label: "Founded" },
       { number: "12", label: "International Tours" },
       { number: "40+", label: "Original Choreographies" },
     ],
-    sinceLabel: "Since 1999",
+    sinceLabel: "Since 2020",
     pillarsLabel: "Pillars",
     pillarsHeading: "The Foundations of Our Practice",
     pillarsDescription:
@@ -59,28 +59,28 @@ const content = {
       "Our executive committee blends artistic mastery, cultural stewardship, and operational excellence to bring every performance to life.",
     executiveMembers: [
       {
-        name: "Aurore Uwera",
-        role: "Executive Director",
+        name: "Kayitare Jean",
+        role: "Chief Executive Officer",
         bio: "Guides the troupe's strategic vision and international partnerships while safeguarding cultural authenticity.",
-        image: "/7.jpg",
+        image: "/team.jpeg",
       },
       {
-        name: "Jean Bosco Nkurunziza",
+        name: "Kayitare Jean",
         role: "Artistic Director",
         bio: "Leads choreography development, music composition, and performer mentorship across all productions.",
-        image: "/3.jpg",
+        image: "/team.jpeg",
       },
       {
-        name: "Claudine Mukamana",
+        name: "Kayitare Jean",
         role: "Community Engagement Lead",
         bio: "Coordinates education programs, workshops, and outreach initiatives with schools and cultural partners.",
-        image: "/5.jpg",
+        image: "/team.jpeg",
       },
       {
-        name: "Emmanuel Habimana",
+        name: "Kayitare Jean",
         role: "Operations & Touring Manager",
         bio: "Oversees logistics, touring schedules, and production operations for local and international showcases.",
-        image: "/10.jpg",
+        image: "/team.jpeg",
       },
     ],
   },
@@ -94,11 +94,11 @@ const content = {
       "Aujourd'hui, Inkumbura z'Ibwanacyambwe mène des initiatives d'éducation culturelle, des résidences de création et des ateliers collaboratifs avec des écoles, des musées et des institutions culturelles en Afrique, en Europe et en Amérique du Nord.",
     ],
     highlights: [
-      { number: "1999", label: "Fondation" },
+      { number: "2020", label: "Fondation" },
       { number: "12", label: "Tournées internationales" },
       { number: "40+", label: "Chorégraphies originales" },
     ],
-    sinceLabel: "Depuis 1999",
+    sinceLabel: "Depuis 2020",
     pillarsLabel: "Piliers",
     pillarsHeading: "Les fondements de notre pratique",
     pillarsDescription:
@@ -136,28 +136,28 @@ const content = {
       "Notre comité exécutif allie maîtrise artistique, préservation culturelle et excellence opérationnelle pour donner vie à chaque spectacle.",
     executiveMembers: [
       {
-        name: "Aurore Uwera",
-        role: "Directrice exécutive",
+        name: "Kayitare Jean",
+        role: "Directeur général",
         bio: "Oriente la vision stratégique de la troupe et les partenariats internationaux tout en protégeant l'authenticité culturelle.",
-        image: "/7.jpg",
+        image: "/team.jpeg",
       },
       {
         name: "Jean Bosco Nkurunziza",
         role: "Directeur artistique",
         bio: "Supervise la création chorégraphique, la composition musicale et le mentorat des interprètes sur toutes les productions.",
-        image: "/3.jpg",
+        image: "/team.jpeg",
       },
       {
         name: "Claudine Mukamana",
         role: "Responsable de l'engagement communautaire",
         bio: "Coordonne les programmes éducatifs, ateliers et actions de sensibilisation avec les écoles et partenaires culturels.",
-        image: "/5.jpg",
+        image: "/team.jpeg",
       },
       {
         name: "Emmanuel Habimana",
         role: "Gestionnaire des opérations et tournées",
         bio: "Supervise la logistique, les calendriers de tournée et la production des représentations locales et internationales.",
-        image: "/10.jpg",
+        image: "/team.jpeg",
       },
     ],
   },
@@ -210,6 +210,7 @@ export default function AboutPage() {
         title={copy.heroTitle}
         subtitle={copy.heroSubtitle}
         backgroundImageUrl="/28.jpg"
+        imagePosition="center 35%"
       />
 
       <section className="mx-auto max-w-6xl px-6 space-y-12 border-b border-emerald-900/10 pb-16">

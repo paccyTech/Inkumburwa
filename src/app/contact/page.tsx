@@ -165,6 +165,7 @@ export default function ContactPage() {
         title={copy.heroTitle}
         subtitle={copy.heroSubtitle}
         backgroundImageUrl="/28.jpg"
+        imagePosition="center 35%"
       />
 
       <section className="mx-auto max-w-6xl px-6">
@@ -263,7 +264,7 @@ export default function ContactPage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  href="https://www.instagram.com/inkumbura"
+                  href="https://www.instagram.com/itorero_inkumburwa/"
                   aria-label="Instagram"
                   className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-emerald-900"
                   target="_blank"

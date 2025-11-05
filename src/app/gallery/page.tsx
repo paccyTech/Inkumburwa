@@ -275,6 +275,7 @@ export default function GalleryPage() {
         title={copy.heroTitle}
         subtitle={copy.heroSubtitle}
         backgroundImageUrl="/28.jpg"
+        imagePosition="center 35%"
       />
 
       <section className="mx-auto max-w-6xl px-6">

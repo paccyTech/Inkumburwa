@@ -155,6 +155,7 @@ export default function ServicesPage() {
         title={copy.heroTitle}
         subtitle={copy.heroSubtitle}
         backgroundImageUrl="/28.jpg"
+        imagePosition="center 35%"
       />
 
       <section className="bg-white">

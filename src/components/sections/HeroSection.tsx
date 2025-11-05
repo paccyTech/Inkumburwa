@@ -39,7 +39,7 @@ export function HeroSection() {
           fill
           className="object-cover object-bottom md:hidden"
           priority
-          quality={100}
+          sizes="100vw"
         />
         <Image
           src="/Home1.jpg"
@@ -47,7 +47,7 @@ export function HeroSection() {
           fill
           className="hidden object-cover md:block"
           priority
-          quality={100}
+          sizes="(min-width: 1024px) 100vw, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/95 via-emerald-900/85 to-emerald-800/60" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,78,59,0.45),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(4,47,29,0.4),transparent_60%)]" />
