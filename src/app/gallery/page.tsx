@@ -215,10 +215,10 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
       "wedding-procession-gourd": {
         caption: "Graceful bridal procession honoring tradition",
         takenAt: "September 2024 · Rwamagana",
-        alt: "Procession of Inkumbura performers carrying gourds",
+        alt: "Procession of Inkumburwa performers carrying gourds",
       },
       "corporate-cultural-night": {
-        caption: "Corporate partners celebrating with Inkumbura",
+        caption: "Corporate partners celebrating with Inkumburwa",
         takenAt: "October 2024 · Kigali",
         alt: "Dancers performing at a corporate cultural night",
       },
@@ -235,7 +235,7 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
       "corporate-tribute": {
         caption: "Tribute dance for corporate honorees",
         takenAt: "January 2025 · Kigali",
-        alt: "Inkumbura troupe giving a tribute performance",
+        alt: "Inkumburwa troupe giving a tribute performance",
       },
       "festival-sunset-show": {
         caption: "Sunset showcase at the cultural exchange festival",
@@ -248,7 +248,7 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
         alt: "Community outreach dance workshop",
       },
       "festival-grand-finale-2025": {
-        caption: "Grand finale bow at the Inkumbura festival",
+        caption: "Grand finale bow at the Inkumburwa festival",
         takenAt: "April 2025 · Muhanga",
         alt: "Grand finale with dancers bowing",
       },
@@ -333,10 +333,10 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
       "wedding-procession-gourd": {
         caption: "Procession nuptiale gracieuse honorant la tradition",
         takenAt: "Septembre 2024 · Rwamagana",
-        alt: "Procession d'artistes Inkumbura portant des calebasses",
+        alt: "Procession d'artistes Inkumburwa portant des calebasses",
       },
       "corporate-cultural-night": {
-        caption: "Partenaires d'entreprise célébrant avec Inkumbura",
+        caption: "Partenaires d'entreprise célébrant avec Inkumburwa",
         takenAt: "Octobre 2024 · Kigali",
         alt: "Danseurs lors d'une soirée culturelle d'entreprise",
       },
@@ -353,7 +353,7 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
       "corporate-tribute": {
         caption: "Danse hommage pour les partenaires d'entreprise",
         takenAt: "Janvier 2025 · Kigali",
-        alt: "La troupe Inkumbura rendant hommage",
+        alt: "La troupe Inkumburwa rendant hommage",
       },
       "festival-sunset-show": {
         caption: "Spectacle au coucher du soleil lors du festival culturel",
@@ -366,7 +366,7 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
         alt: "Atelier de danse pour la communauté",
       },
       "festival-grand-finale-2025": {
-        caption: "Salut final au festival Inkumbura",
+        caption: "Salut final au festival Inkumburwa",
         takenAt: "Avril 2025 · Muhanga",
         alt: "Finale avec les danseurs saluant",
       },

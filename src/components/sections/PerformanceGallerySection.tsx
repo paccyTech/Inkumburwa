@@ -12,7 +12,7 @@ const content = {
   en: {
     heading: "Performance Gallery",
     description:
-      "Discover the spirit, color, and unity that light up every Inkumbura performance around the world.",
+      "Discover the spirit, color, and unity that light up every Inkumburwa performance around the world.",
     buttonLabel: "View Full Gallery",
     categoryLabels: {
       all: "All events",
@@ -50,7 +50,7 @@ const content = {
   fr: {
     heading: "Galerie de performances",
     description:
-      "Découvrez l'esprit, les couleurs et l'unité qui illuminent chaque performance d'Inkumbura dans le monde.",
+      "Découvrez l'esprit, les couleurs et l'unité qui illuminent chaque performance d'Inkumburwa dans le monde.",
     buttonLabel: "Voir toute la galerie",
     categoryLabels: {
       all: "Tous les événements",

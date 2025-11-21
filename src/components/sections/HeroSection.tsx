@@ -13,19 +13,19 @@ const displayFont = Playfair_Display({
 const content = {
   en: {
     title: "Rwanda's Heritage in Motion",
-    description: "Feel the pulse of traditional dance, music, and storytelling from Inkumbura.",
+    description: "Feel the pulse of traditional dance, music, and storytelling from Inkumburwa.",
     primaryCta: "Book Our Performance",
     secondaryCta: "Explore Our Services",
-    mobileImageAlt: "Inkumbura dance troupe performing",
-    desktopImageAlt: "Inkumbura dance troupe performing",
+    mobileImageAlt: "Inkumburwa dance troupe performing",
+    desktopImageAlt: "Inkumburwa dance troupe performing",
   },
   fr: {
     title: "L'héritage du Rwanda en mouvement",
-    description: "Ressentez l'énergie de la danse, de la musique et des récits d'Inkumbura.",
+    description: "Ressentez l'énergie de la danse, de la musique et des récits d'Inkumburwa.",
     primaryCta: "Réserver notre performance",
     secondaryCta: "Explorer nos services",
-    mobileImageAlt: "La troupe de danse Inkumbura en prestation",
-    desktopImageAlt: "La troupe de danse Inkumbura en prestation",
+    mobileImageAlt: "La troupe de danse Inkumburwa en prestation",
+    desktopImageAlt: "La troupe de danse Inkumburwa en prestation",
   },
 } as const;
 
@@ -36,18 +36,18 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[75vh] overflow-hidden bg-[#10161a] text-white md:min-h-[90vh]">
       <div className="absolute inset-0">
-        <div className="h-full w-full md:hidden">
+        <div className="relative h-full w-full overflow-hidden md:hidden">
           <iframe
-            className="h-full w-full"
+            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
             src="https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1&start=6&end=60"
             title={copy.mobileImageAlt}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
           />
         </div>
-        <div className="hidden h-full w-full md:block">
+        <div className="relative hidden h-full w-full overflow-hidden md:block">
           <iframe
-            className="h-full w-full"
+            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
             src="https://www.youtube.com/embed/vxc4ymgi3U4?autoplay=1&mute=1&loop=1&playlist=vxc4ymgi3U4&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1&start=7&end=42"
             title={copy.desktopImageAlt}
             allow="autoplay; fullscreen; picture-in-picture"

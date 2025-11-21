@@ -42,7 +42,7 @@ export function Header() {
           <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-white/10 backdrop-blur-sm">
             <Image
               src="/logo.png"
-              alt="Inkumbura z'Ibwanacyambwe logo"
+              alt="Inkumburwa z'Ibwanacyambwe logo"
               width={44}
               height={44}
               className="h-full w-full object-contain"

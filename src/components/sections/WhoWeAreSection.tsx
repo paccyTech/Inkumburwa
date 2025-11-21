@@ -9,7 +9,7 @@ const content = {
   en: {
     title: "Who We Are",
     description:
-      "Inkumbura z'Ibwanacyambwe is a renowned cultural troupe dedicated to preserving and sharing the vibrancy of traditional Rwandan dance and music. Our passionate performers bring centuries-old traditions to life with authentic choreography, storytelling, and costume design.",
+      "Inkumburwa z'Ibwanacyambwe is a renowned cultural troupe dedicated to preserving and sharing the vibrancy of traditional Rwandan dance and music. Our passionate performers bring centuries-old traditions to life with authentic choreography, storytelling, and costume design.",
     stats: [
       { value: "5+", label: "Years of Performances" },
       { value: "300+", label: "Events & Festivals" },
@@ -17,16 +17,16 @@ const content = {
     ],
     slideshow: [
       { src: "/7.jpg", alt: "Traditional Rwandan dancers" },
-      { src: "/10.jpg", alt: "Inkumbura troupe performing on stage" },
+      { src: "/10.jpg", alt: "Inkumburwa troupe performing on stage" },
       { src: "/3.jpg", alt: "Cultural performance moment" },
-      { src: "/29.jpeg", alt: "Inkumbura performer carrying a traditional gourd" },
+      { src: "/29.jpeg", alt: "Inkumburwa performer carrying a traditional gourd" },
     ],
     goToSlide: "Go to slide",
   },
   fr: {
     title: "Qui nous sommes",
     description:
-      "Inkumbura z'Ibwanacyambwe est une troupe culturelle renommée dédiée à la préservation et au partage de la richesse de la danse et de la musique traditionnelles rwandaises. Nos artistes passionnés font revivre des traditions séculaires grâce à des chorégraphies authentiques, des récits et des costumes d'époque.",
+      "Inkumburwa z'Ibwanacyambwe est une troupe culturelle renommée dédiée à la préservation et au partage de la richesse de la danse et de la musique traditionnelles rwandaises. Nos artistes passionnés font revivre des traditions séculaires grâce à des chorégraphies authentiques, des récits et des costumes d'époque.",
     stats: [
       { value: "25+", label: "Années de spectacles" },
       { value: "300+", label: "Événements et festivals" },
@@ -34,9 +34,9 @@ const content = {
     ],
     slideshow: [
       { src: "/7.jpg", alt: "Danseurs rwandais traditionnels" },
-      { src: "/10.jpg", alt: "La troupe Inkumbura sur scène" },
+      { src: "/10.jpg", alt: "La troupe Inkumburwa sur scène" },
       { src: "/3.jpg", alt: "Moment de performance culturelle" },
-      { src: "/29.jpeg", alt: "Artiste d'Inkumbura portant une calebasse traditionnelle" },
+      { src: "/29.jpeg", alt: "Artiste d'Inkumburwa portant une calebasse traditionnelle" },
     ],
     goToSlide: "Aller à la diapositive",
   },

@@ -8,13 +8,13 @@ import { useLocale } from "@/context/LocaleContext";
 
 const content = {
   en: {
-    heroTitle: "About Inkumbura z'Ibwanacyambwe",
+    heroTitle: "About Inkumburwa z'Ibwanacyambwe",
     heroSubtitle:
       "We are custodians of Rwanda's artistic legacy, sharing the spirit of our ancestors with audiences worldwide.",
     missionHeading: "Our Mission & Vision",
     missionParagraphs: [
       "From the hills of Ibwanacyambwe to stages around the globe, our troupe carries forward the centuries-old traditions of Rwandan dance. We believe that movement, music, and storytelling can heal, inspire, and unite communities. Our mission is to keep these traditions alive while elevating new voices and choreographies that speak to today’s audiences.",
-      "Today, Inkumbura z'Ibwanacyambwe leads cultural education initiatives, performance residencies, and collaborative workshops with schools, museums, and cultural institutions across Africa, Europe, and North America.",
+      "Today, Inkumburwa z'Ibwanacyambwe leads cultural education initiatives, performance residencies, and collaborative workshops with schools, museums, and cultural institutions across Africa, Europe, and North America.",
     ],
     highlights: [
       { number: "2020", label: "Founded" },
@@ -50,7 +50,7 @@ const content = {
     portraitHeading: "Moments of Movement & Heritage",
     portraitDescription:
       "Swipe through highlights from recent performances, cultural exchanges, and workshop residencies.",
-    portraitAltPrefix: "Inkumbura portrait",
+    portraitAltPrefix: "Inkumburwa portrait",
     portraitPrevious: "Previous portrait",
     portraitNext: "Next portrait",
     executiveLabel: "Executive Committee",
@@ -85,13 +85,13 @@ const content = {
     ],
   },
   fr: {
-    heroTitle: "À propos d'Inkumbura z'Ibwanacyambwe",
+    heroTitle: "À propos d'Inkumburwa z'Ibwanacyambwe",
     heroSubtitle:
       "Nous sommes les gardiens de l'héritage artistique du Rwanda, partageant l'esprit de nos ancêtres avec des publics du monde entier.",
     missionHeading: "Notre mission et notre vision",
     missionParagraphs: [
       "Des collines d'Ibwanacyambwe aux scènes du monde entier, notre troupe perpétue les traditions séculaires de la danse rwandaise. Nous croyons que le mouvement, la musique et le récit peuvent guérir, inspirer et rassembler les communautés. Notre mission est de maintenir ces traditions vivantes tout en mettant en lumière de nouvelles voix et chorégraphies adaptées aux publics d'aujourd'hui.",
-      "Aujourd'hui, Inkumbura z'Ibwanacyambwe mène des initiatives d'éducation culturelle, des résidences de création et des ateliers collaboratifs avec des écoles, des musées et des institutions culturelles en Afrique, en Europe et en Amérique du Nord.",
+      "Aujourd'hui, Inkumburwa z'Ibwanacyambwe mène des initiatives d'éducation culturelle, des résidences de création et des ateliers collaboratifs avec des écoles, des musées et des institutions culturelles en Afrique, en Europe et en Amérique du Nord.",
     ],
     highlights: [
       { number: "2020", label: "Fondation" },
@@ -127,7 +127,7 @@ const content = {
     portraitHeading: "Moments de mouvement et de patrimoine",
     portraitDescription:
       "Faites défiler les moments forts de nos performances récentes, échanges culturels et résidences artistiques.",
-    portraitAltPrefix: "Portrait Inkumbura",
+    portraitAltPrefix: "Portrait Inkumburwa",
     portraitPrevious: "Portrait précédent",
     portraitNext: "Portrait suivant",
     executiveLabel: "Comité exécutif",

@@ -42,7 +42,7 @@ const content = {
       messagePlaceholder: "Tell us about your event or request",
       submit: "Submit Request",
       consent:
-        "By submitting this form you agree to be contacted by Inkumbura z'Ibwanacyambwe about your inquiry.",
+        "By submitting this form you agree to be contacted by Inkumburwa z'Ibwanacyambwe about your inquiry.",
     },
     connect: {
       heading: "Connect With Us",
@@ -53,8 +53,8 @@ const content = {
         title: "Book a Performance",
         description: "Let us bring the rhythm of Rwanda to your stage, festival, or celebration.",
         primary: {
-          label: "bookings@inkumbura.com",
-          href: "mailto:bookings@inkumbura.com",
+          label: "bookings@inkumburwa.com",
+          href: "mailto:bookings@inkumburwa.com",
         },
         secondary: {
           label: "+250788992367",
@@ -65,8 +65,8 @@ const content = {
         title: "Media & Partnerships",
         description: "Collaborate on cultural projects, tours, and documentaries celebrating Rwandan heritage.",
         primary: {
-          label: "media@inkumbura.com",
-          href: "mailto:media@inkumbura.com",
+          label: "media@inkumburwa.com",
+          href: "mailto:media@inkumburwa.com",
         },
         secondary: {
           label: "+250788992368",
@@ -75,7 +75,7 @@ const content = {
       },
       {
         title: "Visit Our Center",
-        description: "Experience rehearsals, exhibitions, and workshops at the Inkumbura Cultural Arts Center.",
+        description: "Experience rehearsals, exhibitions, and workshops at the Inkumburwa Cultural Arts Center.",
         primary: {
           label: "Kimironko Cultural Arts Center",
         },
@@ -108,7 +108,7 @@ const content = {
       messagePlaceholder: "Parlez-nous de votre événement ou de votre demande",
       submit: "Envoyer la demande",
       consent:
-        "En envoyant ce formulaire, vous acceptez d'être contacté par Inkumbura z'Ibwanacyambwe au sujet de votre demande.",
+        "En envoyant ce formulaire, vous acceptez d'être contacté par Inkumburwa z'Ibwanacyambwe au sujet de votre demande.",
     },
     connect: {
       heading: "Restez connectés",
@@ -120,8 +120,8 @@ const content = {
         title: "Réserver une performance",
         description: "Nous apportons le rythme du Rwanda sur votre scène, festival ou célébration.",
         primary: {
-          label: "bookings@inkumbura.com",
-          href: "mailto:bookings@inkumbura.com",
+          label: "bookings@inkumburwa.com",
+          href: "mailto:bookings@inkumburwa.com",
         },
         secondary: {
           label: "+250788992367",
@@ -133,8 +133,8 @@ const content = {
         description:
           "Collaborez sur des projets culturels, des tournées et des documentaires célébrant l'héritage rwandais.",
         primary: {
-          label: "media@inkumbura.com",
-          href: "mailto:media@inkumbura.com",
+          label: "media@inkumburwa.com",
+          href: "mailto:media@inkumburwa.com",
         },
         secondary: {
           label: "+250788992368",
@@ -144,7 +144,7 @@ const content = {
       {
         title: "Visitez notre centre",
         description:
-          "Découvrez nos répétitions, expositions et ateliers au centre culturel Inkumbura.",
+          "Découvrez nos répétitions, expositions et ateliers au centre culturel Inkumburwa.",
         primary: {
           label: "Centre culturel de Kimironko",
         },

@@ -15,7 +15,7 @@ export function Footer() {
             <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white">
               <Image
                 src="/logo.png"
-                alt="Inkumbura z'Ibwanacyambwe logo"
+                alt="Inkumburwa z'Ibwanacyambwe logo"
                 width={40}
                 height={40}
                 className="h-full w-full object-contain"
@@ -80,7 +80,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 bg-emerald-950/80">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-center text-xs text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Inkumbura z&apos;Ibwanacyambwe. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Inkumburwa z&apos;Ibwanacyambwe. All rights reserved.</p>
           <p>{t("footer.crafted")}</p>
         </div>
       </div>

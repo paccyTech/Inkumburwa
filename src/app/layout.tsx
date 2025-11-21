@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     "Experience the authentic beauty of traditional Rwandan culture with Inkumburwa z'Ibwanacyambwe.",
   keywords: [
     "Inkumburwa",
-    "Inkumbura",
     "Rwandan dance troupe",
     "traditional Rwandan dance",
     "Rwanda cultural performances",

@@ -28,8 +28,8 @@ const translations: Record<Locale, TranslationRecord> = {
       getInTouch: "Get in Touch",
       location: "Kigali, Rwanda",
       phone: "Phone: +250788992367",
-      email: "Email: hello@inkumbura.com",
-      bookings: "Bookings: bookings@inkumbura.com",
+      email: "Email: hello@inkumburwa.com",
+      bookings: "Bookings: bookings@inkumburwa.com",
       crafted: "Crafted with passion for Rwanda's heritage.",
       rights: "All rights reserved.",
     },
@@ -43,7 +43,7 @@ const translations: Record<Locale, TranslationRecord> = {
     whoWeAre: {
       title: "Who We Are",
       description:
-        "Inkumbura z'Ibwanacyambwe is a renowned cultural troupe dedicated to preserving and sharing the vibrancy of traditional Rwandan dance and music. Our passionate performers bring centuries-old traditions to life with authentic choreography, storytelling, and costume design.",
+        "Inkumburwa z'Ibwanacyambwe is a renowned cultural troupe dedicated to preserving and sharing the vibrancy of traditional Rwandan dance and music. Our passionate performers bring centuries-old traditions to life with authentic choreography, storytelling, and costume design.",
       stats: {
         years: "Years of Performances",
         events: "Events & Festivals",
@@ -51,7 +51,7 @@ const translations: Record<Locale, TranslationRecord> = {
       },
       slideshowAlt: {
         first: "Traditional Rwandan dancers",
-        second: "Inkumbura troupe performing on stage",
+        second: "Inkumburwa troupe performing on stage",
         third: "Cultural performance moment",
       },
       goToSlide: "Go to slide",
@@ -99,7 +99,7 @@ const translations: Record<Locale, TranslationRecord> = {
     performanceGallery: {
       heading: "Performance Gallery",
       description:
-        "Discover the spirit, color, and unity that light up every Inkumbura performance around the world.",
+        "Discover the spirit, color, and unity that light up every Inkumburwa performance around the world.",
       button: "View Full Gallery",
       categories: {
         all: "All events",
@@ -126,7 +126,7 @@ const translations: Record<Locale, TranslationRecord> = {
       },
     },
     pageHero: {
-      aboutTitle: "About Inkumbura z'Ibwanacyambwe",
+      aboutTitle: "About Inkumburwa z'Ibwanacyambwe",
       aboutSubtitle:
         "We are custodians of Rwanda's artistic legacy, sharing the spirit of our ancestors with audiences worldwide.",
       servicesTitle: "Our Services",
@@ -156,7 +156,7 @@ const translations: Record<Locale, TranslationRecord> = {
         messagePlaceholder: "Tell us about your event or request",
         submit: "Submit Request",
         consent:
-          "By submitting this form you agree to be contacted by Inkumbura z'Ibwanacyambwe about your inquiry.",
+          "By submitting this form you agree to be contacted by Inkumburwa z'Ibwanacyambwe about your inquiry.",
       },
       connectHeading: "Connect With Us",
       connectDescription:
@@ -175,11 +175,11 @@ const translations: Record<Locale, TranslationRecord> = {
         visit: {
           title: "Visit Our Center",
           description:
-            "Experience rehearsals, exhibitions, and workshops at the Inkumbura Cultural Arts Center.",
+            "Experience rehearsals, exhibitions, and workshops at the Inkumburwa Cultural Arts Center.",
         },
         primaryLabels: {
-          bookings: "bookings@inkumbura.com",
-          media: "media@inkumbura.com",
+          bookings: "bookings@inkumburwa.com",
+          media: "media@inkumburwa.com",
           center: "Kimironko Cultural Arts Center",
         },
         secondaryLabels: {
@@ -303,8 +303,8 @@ const translations: Record<Locale, TranslationRecord> = {
       getInTouch: "Nous contacter",
       location: "Kigali, Rwanda",
       phone: "Téléphone : +250788992367",
-      email: "E-mail : hello@inkumbura.com",
-      bookings: "Réservations : bookings@inkumbura.com",
+      email: "E-mail : hello@inkumburwa.com",
+      bookings: "Réservations : bookings@inkumburwa.com",
       crafted: "Conçu avec passion pour le patrimoine rwandais.",
       rights: "Tous droits réservés.",
     },
