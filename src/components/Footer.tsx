@@ -65,7 +65,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://www.instagram.com/inkumbura"
+              href="https://www.instagram.com/itorero_inkumburwa/"
               aria-label="Follow us on Instagram"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/10 transition hover:bg-white hover:text-emerald-900"
               target="_blank"
