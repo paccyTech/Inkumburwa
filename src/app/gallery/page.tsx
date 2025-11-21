@@ -77,7 +77,47 @@ const basePhotos = [
     src: "/Home1.jpg",
     category: "festivals",
   },
- ] as const;
+  {
+    id: "wedding-procession-gourd",
+    src: "/30.jpeg",
+    category: "wedding",
+  },
+  {
+    id: "corporate-cultural-night",
+    src: "/31.jpeg",
+    category: "corporate",
+  },
+  {
+    id: "festival-drumline",
+    src: "/32.jpeg",
+    category: "festivals",
+  },
+  {
+    id: "wedding-bride-entrance",
+    src: "/33.jpeg",
+    category: "wedding",
+  },
+  {
+    id: "corporate-tribute",
+    src: "/34.jpeg",
+    category: "corporate",
+  },
+  {
+    id: "festival-sunset-show",
+    src: "/35.jpeg",
+    category: "festivals",
+  },
+  {
+    id: "community-outreach",
+    src: "/36.jpeg",
+    category: "corporate",
+  },
+  {
+    id: "festival-grand-finale-2025",
+    src: "/37.jpeg",
+    category: "festivals",
+  },
+] as const;
 
 type BasePhoto = (typeof basePhotos)[number];
 type PhotoId = BasePhoto["id"];
@@ -172,6 +212,46 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
         takenAt: "June 2023 · Kigali",
         alt: "Crowd illuminated during the festival finale",
       },
+      "wedding-procession-gourd": {
+        caption: "Graceful bridal procession honoring tradition",
+        takenAt: "September 2024 · Rwamagana",
+        alt: "Procession of Inkumbura performers carrying gourds",
+      },
+      "corporate-cultural-night": {
+        caption: "Corporate partners celebrating with Inkumbura",
+        takenAt: "October 2024 · Kigali",
+        alt: "Dancers performing at a corporate cultural night",
+      },
+      "festival-drumline": {
+        caption: "Royal drumline opening the cultural festival",
+        takenAt: "November 2024 · Rubavu",
+        alt: "Festival drumline energizing the crowd",
+      },
+      "wedding-bride-entrance": {
+        caption: "Bride welcomed with elegant choreography",
+        takenAt: "December 2024 · Nyanza",
+        alt: "Bride entering with traditional dancers",
+      },
+      "corporate-tribute": {
+        caption: "Tribute dance for corporate honorees",
+        takenAt: "January 2025 · Kigali",
+        alt: "Inkumbura troupe giving a tribute performance",
+      },
+      "festival-sunset-show": {
+        caption: "Sunset showcase at the cultural exchange festival",
+        takenAt: "February 2025 · Gisenyi",
+        alt: "Festival performance at sunset",
+      },
+      "community-outreach": {
+        caption: "Community outreach and dance workshop",
+        takenAt: "March 2025 · Kigali",
+        alt: "Community outreach dance workshop",
+      },
+      "festival-grand-finale-2025": {
+        caption: "Grand finale bow at the Inkumbura festival",
+        takenAt: "April 2025 · Muhanga",
+        alt: "Grand finale with dancers bowing",
+      },
     },
   },
   fr: {
@@ -249,6 +329,46 @@ const content: Record<"en" | "fr", LocalizedCopy> = {
         caption: "Encore nocturne aux torches et tambours",
         takenAt: "Juin 2023 · Kigali",
         alt: "Foule illuminée pendant la finale du festival",
+      },
+      "wedding-procession-gourd": {
+        caption: "Procession nuptiale gracieuse honorant la tradition",
+        takenAt: "Septembre 2024 · Rwamagana",
+        alt: "Procession d'artistes Inkumbura portant des calebasses",
+      },
+      "corporate-cultural-night": {
+        caption: "Partenaires d'entreprise célébrant avec Inkumbura",
+        takenAt: "Octobre 2024 · Kigali",
+        alt: "Danseurs lors d'une soirée culturelle d'entreprise",
+      },
+      "festival-drumline": {
+        caption: "Tambours royaux ouvrant le festival culturel",
+        takenAt: "Novembre 2024 · Rubavu",
+        alt: "Tambours ouvrant le festival",
+      },
+      "wedding-bride-entrance": {
+        caption: "Entrée de la mariée accompagnée d'une chorégraphie élégante",
+        takenAt: "Décembre 2024 · Nyanza",
+        alt: "Mariée entrant avec des danseurs traditionnels",
+      },
+      "corporate-tribute": {
+        caption: "Danse hommage pour les partenaires d'entreprise",
+        takenAt: "Janvier 2025 · Kigali",
+        alt: "La troupe Inkumbura rendant hommage",
+      },
+      "festival-sunset-show": {
+        caption: "Spectacle au coucher du soleil lors du festival culturel",
+        takenAt: "Février 2025 · Gisenyi",
+        alt: "Performance de festival au coucher du soleil",
+      },
+      "community-outreach": {
+        caption: "Sensibilisation communautaire et atelier de danse",
+        takenAt: "Mars 2025 · Kigali",
+        alt: "Atelier de danse pour la communauté",
+      },
+      "festival-grand-finale-2025": {
+        caption: "Salut final au festival Inkumbura",
+        takenAt: "Avril 2025 · Muhanga",
+        alt: "Finale avec les danseurs saluant",
       },
     },
   },

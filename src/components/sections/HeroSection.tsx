@@ -1,24 +1,27 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
 import { Reveal } from "../Reveal";
 import { useLocale } from "@/context/LocaleContext";
 
+const displayFont = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
+
 const content = {
   en: {
-    title: "Preserving Rwanda's Heritage Through Dance",
-    description:
-      "Experience the vibrance of traditional Rwandan culture through choreography, music, and storytelling that connects communities across generations.",
+    title: "Rwanda's Heritage in Motion",
+    description: "Feel the pulse of traditional dance, music, and storytelling from Inkumbura.",
     primaryCta: "Book Our Performance",
     secondaryCta: "Explore Our Services",
     mobileImageAlt: "Inkumbura dance troupe performing",
     desktopImageAlt: "Inkumbura dance troupe performing",
   },
   fr: {
-    title: "Préserver l'héritage du Rwanda par la danse",
-    description:
-      "Vivez l'énergie de la culture rwandaise à travers des chorégraphies, de la musique et des récits qui relient les communautés à travers les générations.",
+    title: "L'héritage du Rwanda en mouvement",
+    description: "Ressentez l'énergie de la danse, de la musique et des récits d'Inkumbura.",
     primaryCta: "Réserver notre performance",
     secondaryCta: "Explorer nos services",
     mobileImageAlt: "La troupe de danse Inkumbura en prestation",
@@ -33,29 +36,35 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[75vh] overflow-hidden bg-[#10161a] text-white md:min-h-[90vh]">
       <div className="absolute inset-0">
-        <Image
-          src="/Home-mobile1.jpg"
-          alt={copy.mobileImageAlt}
-          fill
-          className="object-cover object-bottom md:hidden"
-          priority
-          sizes="100vw"
+        <video
+          className="h-full w-full object-cover md:hidden"
+          src="/videos/video4.mov"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/Home-mobile1.jpg"
+          aria-label={copy.mobileImageAlt}
         />
-        <Image
-          src="/Home1.jpg"
-          alt={copy.desktopImageAlt}
-          fill
-          className="hidden object-cover md:block"
-          priority
-          sizes="(min-width: 1024px) 100vw, 100vw"
+        <video
+          className="hidden h-full w-full object-cover md:block"
+          src="/videos/video2.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/Home1.jpg"
+          aria-label={copy.desktopImageAlt}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/95 via-emerald-900/85 to-emerald-800/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,78,59,0.45),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(4,47,29,0.4),transparent_60%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/80 via-emerald-900/65 to-emerald-800/45" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,78,59,0.28),transparent_60%),radial-gradient(circle_at_bottom_right,rgba(4,47,29,0.26),transparent_65%)]" />
       </div>
 
       <div className="relative mx-auto flex max-w-5xl flex-col justify-end gap-10 px-6 pb-24 pt-48 md:pb-28 md:pt-56">
         <Reveal className="max-w-2xl space-y-7">
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          <h1
+            className={`${displayFont.className} text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl`}
+          >
             {copy.title}
           </h1>
           <p className="text-lg leading-8 text-white/80 sm:text-xl">

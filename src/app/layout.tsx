@@ -1,19 +1,21 @@
 import Script from "next/script";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Fira_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { LocaleProvider } from "@/context/LocaleContext";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bodyFont = Poppins({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const codeFont = Fira_Mono({
+  variable: "--font-code",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const siteUrl = "https://inkumburwa.com";
@@ -107,7 +109,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-emerald-50 text-emerald-950 antialiased`}
+        className={`${bodyFont.variable} ${codeFont.variable} min-h-screen bg-emerald-50 text-emerald-950 antialiased`}
       >
         <Script id="organization-schema" type="application/ld+json" strategy="beforeInteractive">
           {JSON.stringify(organizationJsonLd)}
