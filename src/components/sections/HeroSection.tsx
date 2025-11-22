@@ -36,15 +36,31 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[75vh] overflow-hidden bg-[#10161a] text-white md:min-h-[90vh]">
       <div className="absolute inset-0">
+        {/* Mobile: Static image as primary, video as overlay that may not load */}
         <div className="relative h-full w-full overflow-hidden md:hidden">
+          {/* Fallback image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/Home-mobile1.jpg')" }}
+          />
+          {/* Video overlay - will only show if YouTube allows it */}
           <iframe
-            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 opacity-0"
             src="https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1&start=6&end=60"
             title={copy.mobileImageAlt}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
+            onLoad={(e) => {
+              // If video loads successfully, make it visible
+              e.currentTarget.style.opacity = '1';
+            }}
+            onError={() => {
+              // Video failed to load, keep fallback image visible
+              console.log('Mobile video failed to load, showing fallback image');
+            }}
           />
         </div>
+        {/* Desktop: Video with fallback */}
         <div className="relative hidden h-full w-full overflow-hidden md:block">
           <iframe
             className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
@@ -52,6 +68,10 @@ export function HeroSection() {
             title={copy.desktopImageAlt}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
+            onError={() => {
+              // If desktop video fails, could add fallback here too
+              console.log('Desktop video failed to load');
+            }}
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/80 via-emerald-900/65 to-emerald-800/45" />
