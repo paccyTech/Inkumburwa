@@ -145,7 +145,7 @@ export function ServicesOverviewSection() {
         {copy.services.map((service) => (
           <div
             key={service.label}
-            className="group relative flex flex-col gap-4 rounded-2xl border border-emerald-900/10 bg-white p-6 text-left shadow-sm shadow-emerald-900/5 transition hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-900/10"
+            className="group relative flex flex-col gap-4 rounded-2xl border border-emerald-900/10 bg-white p-6 text-center shadow-sm shadow-emerald-900/5 transition hover:-translate-y-2 hover:shadow-lg hover:shadow-emerald-900/10"
           >
             <div className="flex justify-center">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full text-emerald-600">
