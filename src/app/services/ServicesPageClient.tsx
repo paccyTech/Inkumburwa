@@ -38,7 +38,6 @@ const content = {
           </svg>
         ),
         image: "/26.jpg",
-        videoUrl: "https://www.youtube.com/embed/vxc4ymgi3U4?autoplay=1&mute=1&loop=1&playlist=vxc4ymgi3U4&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&start=7&end=42",
         highlights: [
           "Full troupe showcases with live drumming",
           "Traditional storytelling woven into every set",
@@ -54,8 +53,7 @@ const content = {
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/30.jpeg",
         highlights: [
           "Authentic Kinyarwanda dance traditions",
           "Youthful performers bringing fresh energy",
@@ -73,8 +71,7 @@ const content = {
             <path d="M2 12h20" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/vCPnOaPBpEM?autoplay=1&mute=1&loop=1&playlist=vCPnOaPBpEM&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/33.jpeg",
         highlights: [
           "Authentic Rwandan dance traditions",
           "Graceful movements and powerful rhythms",
@@ -90,8 +87,7 @@ const content = {
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/XOjVUrFKCQ8?autoplay=1&mute=1&loop=1&playlist=XOjVUrFKCQ8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/38.jpg",
         highlights: [
           "Authentic Intore dance performances",
           "Historical significance and cultural context",
@@ -141,8 +137,7 @@ const content = {
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/30.jpeg",
         highlights: [
           "Traditions de danse Kinyarwanda authentiques",
           "Interprètes jeunes apportant une énergie fraîche",
@@ -160,8 +155,7 @@ const content = {
             <path d="M2 12h20" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/vCPnOaPBpEM?autoplay=1&mute=1&loop=1&playlist=vCPnOaPBpEM&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/33.jpeg",
         highlights: [
           "Traditions de danse rwandaise authentiques",
           "Mouvements gracieux et rythmes puissants",
@@ -177,8 +171,7 @@ const content = {
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg>
         ),
-        image: "/placeholder.jpg",
-        videoUrl: "https://www.youtube.com/embed/XOjVUrFKCQ8?autoplay=1&mute=1&loop=1&playlist=XOjVUrFKCQ8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        image: "/38.jpg",
         highlights: [
           "Performances authentiques de danse Intore",
           "Signification historique et contexte culturel",

@@ -55,6 +55,33 @@ const content = {
         caption: "Intore call-and-response at Inganzo Festival",
         takenAt: "August 2024 · Huye",
       },
+      {
+        id: "girls-dance-kinyarwanda",
+        src: "/30.jpeg",
+        alt: "Girls Dance Kinyarwanda performance video",
+        category: "all" as const,
+        caption: "Vibrant Kinyarwanda girls' dance performance",
+        takenAt: "Recent · Kigali",
+        videoUrl: "KtO2i-ICsk8",
+      },
+      {
+        id: "rwandan-dance-performances",
+        src: "/33.jpeg",
+        alt: "Rwandan Dance Performances video",
+        category: "all" as const,
+        caption: "Grace and power of authentic Rwandan dance",
+        takenAt: "Recent · Kigali",
+        videoUrl: "vCPnOaPBpEM",
+      },
+      {
+        id: "intore-dance-highlights",
+        src: "/38.jpg",
+        alt: "Intore Dance Highlights video",
+        category: "all" as const,
+        caption: "Intore traditional dance highlights",
+        takenAt: "Recent · Kigali",
+        videoUrl: "XOjVUrFKCQ8",
+      },
     ],
   },
   fr: {
@@ -93,6 +120,33 @@ const content = {
         caption: "Appel-réponse Intore au festival Inganzo",
         takenAt: "Août 2024 · Huye",
       },
+      {
+        id: "girls-dance-kinyarwanda",
+        src: "/30.jpeg",
+        alt: "Vidéo de performance Danse des Filles Kinyarwanda",
+        category: "all" as const,
+        caption: "Performance vibrante de danse des filles Kinyarwanda",
+        takenAt: "Récent · Kigali",
+        videoUrl: "KtO2i-ICsk8",
+      },
+      {
+        id: "rwandan-dance-performances",
+        src: "/33.jpeg",
+        alt: "Vidéo Performances de Danse Rwandaise",
+        category: "all" as const,
+        caption: "Grâce et puissance de la danse rwandaise authentique",
+        takenAt: "Récent · Kigali",
+        videoUrl: "vCPnOaPBpEM",
+      },
+      {
+        id: "intore-dance-highlights",
+        src: "/38.jpg",
+        alt: "Vidéo Points forts de la danse Intore",
+        category: "all" as const,
+        caption: "Points forts de la danse traditionnelle Intore",
+        takenAt: "Récent · Kigali",
+        videoUrl: "XOjVUrFKCQ8",
+      },
     ],
   },
 } as const;
@@ -120,7 +174,7 @@ export function PerformanceGallerySection() {
             {image.videoUrl ? (
               <iframe
                 className="w-full h-full"
-                src={image.videoUrl}
+                src={`https://www.youtube.com/embed/${image.videoUrl}?autoplay=1&mute=1&loop=1&playlist=${image.videoUrl}&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1`}
                 title={image.alt}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
@@ -131,7 +185,7 @@ export function PerformanceGallerySection() {
                 alt={image.alt}
                 fill
                 sizes="(min-width: 1024px) 30vw, (min-width: 768px) 33vw, 100vw"
-                className="object-cover object-center transition duration-500"
+                className="object-cover object-center transition duration-500 group-hover:scale-105"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/25 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
