@@ -6,6 +6,16 @@ import { useLocale } from "@/context/LocaleContext";
 
 type CategoryId = "all" | "wedding" | "corporate" | "festivals";
 
+type Photo = {
+  id: string;
+  src: string;
+  alt: string;
+  category: CategoryId;
+  caption: string;
+  takenAt: string;
+  videoUrl?: string;
+};
+
 const categories: CategoryId[] = ["all", "wedding", "corporate", "festivals"];
 
 const content = {
@@ -102,18 +112,28 @@ export function PerformanceGallerySection() {
         </p>
       </div>
       <div className="mt-12 grid gap-8 md:grid-cols-3">
-        {copy.photos.map((image) => (
+        {(copy.photos as unknown as Photo[]).map((image) => (
           <div
             key={image.id}
-            className="group relative aspect-[3/4] overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white shadow-xl shadow-emerald-900/10"
+            className={`group relative overflow-hidden rounded-[2rem] border border-emerald-900/10 bg-white shadow-xl shadow-emerald-900/10 ${image.videoUrl ? 'aspect-[9/16] max-h-[30rem]' : 'aspect-[3/4]'}`}
           >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(min-width: 1024px) 30vw, (min-width: 768px) 33vw, 100vw"
-              className="object-cover object-center transition duration-500"
-            />
+            {image.videoUrl ? (
+              <iframe
+                className="w-full h-full"
+                src={image.videoUrl}
+                title={image.alt}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(min-width: 1024px) 30vw, (min-width: 768px) 33vw, 100vw"
+                className="object-cover object-center transition duration-500"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/25 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
             <div className="absolute inset-x-0 bottom-0 translate-y-full bg-emerald-950/85 px-4 py-3 text-left text-white transition group-hover:translate-y-0">
               <p className="text-sm font-semibold">{image.caption}</p>

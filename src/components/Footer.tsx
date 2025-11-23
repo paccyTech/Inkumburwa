@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLocale } from "@/context/LocaleContext";
 
 export function Footer() {
+  const pathname = usePathname();
   const { t } = useLocale();
+
+  // Don't render footer on admin routes
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <footer className="bg-emerald-950 text-white">

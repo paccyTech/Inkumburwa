@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/about", labelKey: "nav.about" },
   { href: "/services", labelKey: "nav.services" },
   { href: "/gallery", labelKey: "nav.gallery" },
+  { href: "/events", labelKey: "nav.events" },
   { href: "/contact", labelKey: "nav.contact" },
 ];
 
@@ -23,6 +24,11 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const { locale, setLocale, t } = useLocale();
+
+  // Don't render header on admin routes
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);

@@ -2,9 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { useLocale } from "@/context/LocaleContext";
+
+type Service = {
+  title: string;
+  description: string;
+  icon: React.ReactElement;
+  image: string;
+  videoUrl?: string;
+  highlights: string[];
+};
 
 const content = {
   en: {
@@ -16,7 +26,7 @@ const content = {
       "Choose from signature performances, bespoke collaborations, and interactive cultural experiences curated for your audience.",
     services: [
       {
-        title: "Traditional Dance Performances",
+        title: "Wedding Traditional Dance Performances",
         description:
           "Immersive productions featuring the dynamic choreography, rhythms, and regalia at the heart of Rwanda's culture.",
         icon: (
@@ -28,6 +38,7 @@ const content = {
           </svg>
         ),
         image: "/26.jpg",
+        videoUrl: "https://www.youtube.com/embed/vxc4ymgi3U4?autoplay=1&mute=1&loop=1&playlist=vxc4ymgi3U4&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&start=7&end=42",
         highlights: [
           "Full troupe showcases with live drumming",
           "Traditional storytelling woven into every set",
@@ -35,25 +46,26 @@ const content = {
         ],
       },
       {
-        title: "Customized Choreography",
+        title: "Girls Dance Kinyarwanda",
         description:
-          "Collaborate with our creative directors to craft unforgettable performances tailored to your celebration.",
+          "Experience the vibrant energy and cultural storytelling of Kinyarwanda girls' dance performances, blending traditional rhythms with youthful passion.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
           </svg>
         ),
-        image: "/6.jpg",
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
         highlights: [
-          "Tailored routines for weddings and galas",
-          "Workshops and rehearsals for participants",
-          "Narratives designed around your theme",
+          "Authentic Kinyarwanda dance traditions",
+          "Youthful performers bringing fresh energy",
+          "Cultural narratives through movement",
         ],
       },
       {
-        title: "Cultural Immersion Workshops",
+        title: "Rwandan Dance Performances",
         description:
-          "Interactive experiences that teach traditional movements, rhythms, and cultural storytelling to your guests or teams.",
+          "Witness the grace and power of authentic Rwandan dance performances, showcasing the rich cultural heritage and storytelling through movement.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <circle cx="12" cy="12" r="10" />
@@ -61,11 +73,29 @@ const content = {
             <path d="M2 12h20" />
           </svg>
         ),
-        image: "/31.jpeg",
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/vCPnOaPBpEM?autoplay=1&mute=1&loop=1&playlist=vCPnOaPBpEM&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
         highlights: [
-          "Hands-on sessions led by master performers",
-          "Educational talks on history and symbolism",
-          "Adaptable formats for schools and enterprises",
+          "Authentic Rwandan dance traditions",
+          "Graceful movements and powerful rhythms",
+          "Cultural heritage brought to life",
+        ],
+      },
+      {
+        title: "Intore Dance Highlights",
+        description:
+          "Experience the power and grace of Intore, Rwanda's iconic traditional dance that embodies strength, unity, and cultural pride.",
+        icon: (
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        ),
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/XOjVUrFKCQ8?autoplay=1&mute=1&loop=1&playlist=XOjVUrFKCQ8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        highlights: [
+          "Authentic Intore dance performances",
+          "Historical significance and cultural context",
+          "Inspiring displays of Rwandan heritage",
         ],
       },
     ],
@@ -84,7 +114,7 @@ const content = {
       "Choisissez parmi nos performances signatures, nos collaborations sur mesure et nos expériences culturelles interactives.",
     services: [
       {
-        title: "Performances de danse traditionnelle",
+        title: "Performances de danse traditionnelle de mariage",
         description:
           "Des productions immersives mettant en valeur la chorégraphie, les rythmes et les costumes emblématiques du Rwanda.",
         icon: (
@@ -103,25 +133,26 @@ const content = {
         ],
       },
       {
-        title: "Chorégraphies personnalisées",
+        title: "Danse des Filles Kinyarwanda",
         description:
-          "Collaborez avec nos directeurs artistiques pour créer des performances inoubliables adaptées à votre événement.",
+          "Découvrez l'énergie vibrante et les récits culturels des performances de danse des filles Kinyarwanda, mêlant rythmes traditionnels et passion juvénile.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
           </svg>
         ),
-        image: "/6.jpg",
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/KtO2i-ICsk8?autoplay=1&mute=1&loop=1&playlist=KtO2i-ICsk8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
         highlights: [
-          "Routines sur mesure pour mariages et galas",
-          "Ateliers et répétitions pour les participants",
-          "Narrations conçues autour de votre thème",
+          "Traditions de danse Kinyarwanda authentiques",
+          "Interprètes jeunes apportant une énergie fraîche",
+          "Narratifs culturels à travers le mouvement",
         ],
       },
       {
-        title: "Ateliers d'immersion culturelle",
+        title: "Performances de Danse Rwandaise",
         description:
-          "Des expériences interactives pour découvrir mouvements, rythmes et récits culturels avec vos invités ou équipes.",
+          "Témoin de la grâce et de la puissance des performances de danse rwandaise authentiques, mettant en valeur le riche patrimoine culturel et les récits à travers le mouvement.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <circle cx="12" cy="12" r="10" />
@@ -129,11 +160,29 @@ const content = {
             <path d="M2 12h20" />
           </svg>
         ),
-        image: "/31.jpeg",
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/vCPnOaPBpEM?autoplay=1&mute=1&loop=1&playlist=vCPnOaPBpEM&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
         highlights: [
-          "Sessions pratiques animées par des maîtres",
-          "Conférences pédagogiques sur l'histoire et les symboles",
-          "Formats adaptables pour écoles et entreprises",
+          "Traditions de danse rwandaise authentiques",
+          "Mouvements gracieux et rythmes puissants",
+          "Patrimoine culturel pris vie",
+        ],
+      },
+      {
+        title: "Points forts de la danse Intore",
+        description:
+          "Découvrez la puissance et la grâce de l'Intore, la danse traditionnelle emblématique du Rwanda qui incarne la force, l'unité et la fierté culturelle.",
+        icon: (
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        ),
+        image: "/placeholder.jpg",
+        videoUrl: "https://www.youtube.com/embed/XOjVUrFKCQ8?autoplay=1&mute=1&loop=1&playlist=XOjVUrFKCQ8&controls=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1",
+        highlights: [
+          "Performances authentiques de danse Intore",
+          "Signification historique et contexte culturel",
+          "Présentations inspirantes du patrimoine rwandais",
         ],
       },
     ],
@@ -148,6 +197,67 @@ const content = {
 export default function ServicesPageClient() {
   const { locale } = useLocale();
   const copy = content[locale] ?? content.en;
+  const [mutedVideos, setMutedVideos] = useState<Set<number>>(new Set([0, 1, 2, 3])); // All start muted
+  const videoRefs = useRef<(HTMLIFrameElement | null)[]>([]);
+
+  const toggleMute = (index: number) => {
+    const iframe = videoRefs.current[index];
+    if (iframe) {
+      const currentSrc = iframe.src;
+      if (mutedVideos.has(index)) {
+        // Unmute - change mute=1 to mute=0
+        iframe.src = currentSrc.replace('mute=1', 'mute=0');
+        setMutedVideos(prev => {
+          const newSet = new Set(prev);
+          newSet.delete(index);
+          return newSet;
+        });
+      } else {
+        // Mute - change mute=0 to mute=1
+        iframe.src = currentSrc.replace('mute=0', 'mute=1');
+        setMutedVideos(prev => new Set(prev).add(index));
+      }
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const iframe = entry.target as HTMLIFrameElement;
+          
+          if (entry.isIntersecting) {
+            // Video is in view, unmute it
+            const currentSrc = iframe.src;
+            if (currentSrc.includes('mute=1')) {
+              iframe.src = currentSrc.replace('mute=1', 'mute=0');
+            }
+          } else {
+            // Video is out of view, mute it
+            const currentSrc = iframe.src;
+            if (currentSrc.includes('mute=0')) {
+              iframe.src = currentSrc.replace('mute=0', 'mute=1');
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the video is visible
+        rootMargin: '50px' // Start/stop a bit before/after entering/leaving viewport
+      }
+    );
+
+    // Observe all video iframes
+    videoRefs.current.forEach((iframe) => {
+      if (iframe) {
+        observer.observe(iframe);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="space-y-24 pb-24">
@@ -175,12 +285,11 @@ export default function ServicesPageClient() {
 
           {/* Services List */}
           <div className="space-y-16">
-            {copy.services.map((service, index) => (
+            {(copy.services as unknown as Service[]).map((service, index) => (
               <Reveal key={service.title} delay={index * 150} className="group">
-                <div className="overflow-hidden rounded-3xl bg-white shadow-xl shadow-emerald-900/10 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-900/20 hover:-translate-y-2">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    {/* Content Section - Left */}
-                    <div className="p-8 lg:p-12 space-y-6 flex flex-col justify-center">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Content Section - Left */}
+                  <div className={`${service.videoUrl?.includes('vxc4ymgi3U4') ? 'pt-0 pb-8 lg:pt-0 lg:pb-12' : 'p-8 lg:p-12'} space-y-6 flex flex-col ${service.videoUrl?.includes('vxc4ymgi3U4') ? 'justify-start md:min-h-[20rem]' : 'justify-center md:min-h-[28rem]'}`}>
                       {/* Icon and Title */}
                       <div className="space-y-4">
                         <div className="flex justify-center">
@@ -214,19 +323,53 @@ export default function ServicesPageClient() {
                       </div>
                     </div>
 
-                    {/* Image Section - Right */}
-                    <div className="relative h-80 md:h-auto overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover transition duration-700 group-hover:scale-105"
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                      />
+                    {/* Image/Video Section - Right */}
+                    <div className={`relative overflow-hidden ${service.videoUrl ? (service.videoUrl.includes('vxc4ymgi3U4') ? 'aspect-video md:aspect-video' : 'aspect-[9/16] md:aspect-[9/16] max-h-[30rem]') : 'h-80 md:h-auto'}`}>
+                      {service.videoUrl ? (
+                        <div className="relative w-full h-full">
+                          <iframe
+                            ref={(el) => {
+                              if (el) videoRefs.current[index] = el;
+                            }}
+                            data-video-id={service.videoUrl?.split('/embed/')[1]?.split('?')[0]}
+                            className="w-full h-full"
+                            src={service.videoUrl}
+                            title={`${service.title} promotional video`}
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowFullScreen
+                          />
+                          
+                          {/* Audio Control */}
+                          <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4">
+                            <button
+                              onClick={() => toggleMute(index)}
+                              className="bg-black/80 md:bg-black/70 hover:bg-black/90 text-white p-2 md:p-3 rounded-full transition-all duration-200 hover:scale-110 shadow-lg touch-manipulation"
+                              aria-label={mutedVideos.has(index) ? 'Unmute video' : 'Mute video'}
+                            >
+                              {mutedVideos.has(index) ? (
+                                <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v4.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                </svg>
+                              ) : (
+                                <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                </svg>
+                              )}
+                            </button>
+                          </div>
+                        </div>
+                      ) : (
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover transition duration-700 group-hover:scale-105"
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-transparent to-transparent" />
                     </div>
                   </div>
-                </div>
               </Reveal>
             ))}
           </div>

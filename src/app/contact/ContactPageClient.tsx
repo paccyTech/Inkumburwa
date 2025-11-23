@@ -75,9 +75,9 @@ const content = {
       },
       {
         title: "Visit Our Center",
-        description: "Experience rehearsals, exhibitions, and workshops at the Inkumburwa Cultural Arts Center.",
+        description: "Experience rehearsals, exhibitions, and workshops at the Inkumburwa Cultural Arts Center at UR College of Science and Technology.",
         primary: {
-          label: "Kimironko Cultural Arts Center",
+          label: "UR College of Science and Technology, KN 7 Ave, Kigali, Rwanda (Former KIST)",
         },
         secondary: {
           label: "Mon – Sat · 09:00 to 18:00",
@@ -144,9 +144,9 @@ const content = {
       {
         title: "Visitez notre centre",
         description:
-          "Découvrez nos répétitions, expositions et ateliers au centre culturel Inkumburwa.",
+          "Découvrez nos répétitions, expositions et ateliers au centre culturel Inkumburwa à l'Université du Rwanda, Collège des Sciences et Technologies.",
         primary: {
-          label: "Centre culturel de Kimironko",
+          label: "Université du Rwanda, Collège des Sciences et Technologies, KN 7 Ave, Kigali, Rwanda (Ancien KIST)",
         },
         secondary: {
           label: "Lun – Sam · 09h00 à 18h00",
@@ -443,6 +443,20 @@ export default function ContactPageClient() {
                               ) : (
                                 <span>{detail.secondary.label}</span>
                               )}
+                            </div>
+                          )}
+                          {index === 2 && (
+                            <div className="mt-4">
+                              <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.494!2d30.0644!3d-1.9579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJV21Oyyuk3BkR26oTGUrG2hQ!2sUR%20College%20of%20Science%20and%20Technology!5e0!3m2!1sen!2srw!4v1699999999!5m2!1sen!2srw"
+                                width="100%"
+                                height="200"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="UR College of Science and Technology Location"
+                              ></iframe>
                             </div>
                           )}
                         </div>

@@ -15,6 +15,7 @@ const translations: Record<Locale, TranslationRecord> = {
       about: "About",
       services: "Services",
       gallery: "Gallery",
+      events: "Events",
       contact: "Contact",
     },
     header: {
@@ -267,6 +268,35 @@ const translations: Record<Locale, TranslationRecord> = {
         },
       },
     },
+    events: {
+      title: "Upcoming Events",
+      subtitle:
+        "Join us for upcoming traditional concerts and cultural performances celebrating Rwanda's heritage.",
+      noEvents: "No upcoming events at this time. Check back soon!",
+      event: {
+        traditionalConcert: {
+          title: "Traditional Concert Series",
+          description: "Experience authentic Rwandan dance and music performances.",
+          date: "November 22, 2025",
+          location: "Kigali Convention Centre",
+          time: "3:00 PM",
+        },
+        culturalFestival: {
+          title: "East African Cultural Festival",
+          description: "Featuring traditional performances from across East Africa.",
+          date: "October 15, 2025",
+          location: "Nairobi, Kenya",
+          time: "2:00 PM",
+        },
+        heritageShowcase: {
+          title: "Heritage Showcase",
+          description: "A celebration of Rwanda's rich cultural heritage through dance and music.",
+          date: "December 25, 2025",
+          location: "Kimironko Cultural Center",
+          time: "6:00 PM",
+        },
+      },
+    },
     about: {
       pillarsLabel: "Pillars",
       pillarsHeading: "The Foundations of Our Practice",
@@ -290,6 +320,7 @@ const translations: Record<Locale, TranslationRecord> = {
       about: "À propos",
       services: "Services",
       gallery: "Galerie",
+      events: "Événements",
       contact: "Contact",
     },
     header: {
@@ -307,6 +338,35 @@ const translations: Record<Locale, TranslationRecord> = {
       bookings: "Réservations : bookings@inkumburwa.com",
       crafted: "Conçu avec passion pour le patrimoine rwandais.",
       rights: "Tous droits réservés.",
+    },
+    events: {
+      title: "Événements à venir",
+      subtitle:
+        "Rejoignez-nous pour les prochains concerts traditionnels et performances culturelles célébrant le patrimoine du Rwanda.",
+      noEvents: "Aucun événement à venir pour le moment. Revenez bientôt !",
+      event: {
+        traditionalConcert: {
+          title: "Série de concerts traditionnels",
+          description: "Découvrez des performances authentiques de danse et musique rwandaises.",
+          date: "22 novembre 2025",
+          location: "Centre des congrès de Kigali",
+          time: "15h00",
+        },
+        culturalFestival: {
+          title: "Festival culturel d'Afrique de l'Est",
+          description: "Présentant des performances traditionnelles de toute l'Afrique de l'Est.",
+          date: "15 octobre 2025",
+          location: "Nairobi, Kenya",
+          time: "14h00",
+        },
+        heritageShowcase: {
+          title: "Présentation du patrimoine",
+          description: "Une célébration du riche patrimoine culturel du Rwanda à travers la danse et la musique.",
+          date: "25 décembre 2025",
+          location: "Centre Culturel de Kimironko",
+          time: "18h00",
+        },
+      },
     },
   },
 };

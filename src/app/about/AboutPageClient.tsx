@@ -13,7 +13,7 @@ const content = {
       "We are custodians of Rwanda's artistic legacy, sharing the spirit of our ancestors with audiences worldwide.",
     missionHeading: "Our Mission & Vision",
     missionParagraphs: [
-      "From the hills of Ibwanacyambwe to stages around the globe, our troupe carries forward the centuries-old traditions of Rwandan dance. We believe that movement, music, and storytelling can heal, inspire, and unite communities. Our mission is to keep these traditions alive while elevating new voices and choreographies that speak to today’s audiences.",
+      "Based at UR College of Science and Technology, from the hills of Ibwanacyambwe to stages around the globe, our troupe carries forward the centuries-old traditions of Rwandan dance. We believe that movement, music, and storytelling can heal, inspire, and unite communities. Our mission is to keep these traditions alive while elevating new voices and choreographies that speak to today's audiences.",
       "Today, Inkumburwa z'Ibwanacyambwe leads cultural education initiatives, performance residencies, and collaborative workshops with schools, museums, and cultural institutions across Africa, Europe, and North America.",
     ],
     highlights: [
@@ -104,7 +104,7 @@ const content = {
       "Nous sommes les gardiens de l'héritage artistique du Rwanda, partageant l'esprit de nos ancêtres avec des publics du monde entier.",
     missionHeading: "Notre mission et notre vision",
     missionParagraphs: [
-      "Des collines d'Ibwanacyambwe aux scènes du monde entier, notre troupe perpétue les traditions séculaires de la danse rwandaise. Nous croyons que le mouvement, la musique et le récit peuvent guérir, inspirer et rassembler les communautés. Notre mission est de maintenir ces traditions vivantes tout en mettant en lumière de nouvelles voix et chorégraphies adaptées aux publics d'aujourd'hui.",
+      "Basé à l'Université du Rwanda, Collège des Sciences et Technologies, des collines d'Ibwanacyambwe aux scènes du monde entier, notre troupe perpétue les traditions séculaires de la danse rwandaise. Nous croyons que le mouvement, la musique et le récit peuvent guérir, inspirer et rassembler les communautés. Notre mission est de maintenir ces traditions vivantes tout en mettant en lumière de nouvelles voix et chorégraphies adaptées aux publics d'aujourd'hui.",
       "Aujourd'hui, Inkumburwa z'Ibwanacyambwe mène des initiatives d'éducation culturelle, des résidences de création et des ateliers collaboratifs avec des écoles, des musées et des institutions culturelles en Afrique, en Europe et en Amérique du Nord.",
     ],
     highlights: [

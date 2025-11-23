@@ -164,6 +164,29 @@ export function ServicesOverviewSection() {
           </div>
         ))}
       </div>
+
+      {/* Cultural Services Video */}
+      <div className="mt-16">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-emerald-950 mb-2">
+              Experience Our Cultural Heritage
+            </h3>
+            <p className="text-emerald-900/80">
+              Watch our traditional performances in action
+            </p>
+          </div>
+          <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/ZT5tny0Zjvo?rel=0"
+              title="Traditional Rwandan Cultural Performance"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
