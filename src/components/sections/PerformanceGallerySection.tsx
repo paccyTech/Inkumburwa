@@ -41,7 +41,7 @@ const content = {
       },
       {
         id: "corporate-leadership-summit",
-        src: "/3.jpg",
+        src: "/39.jpg",
         alt: "Corporate gala with Inkumburwa on stage",
         category: "corporate" as const,
         caption: "Annual leadership summit cultural showcase",
@@ -106,7 +106,7 @@ const content = {
       },
       {
         id: "corporate-leadership-summit",
-        src: "/3.jpg",
+        src: "/39.jpg",
         alt: "Gala d'entreprise avec Inkumburwa sur scène",
         category: "corporate" as const,
         caption: "Spectacle culturel au sommet du leadership annuel",
