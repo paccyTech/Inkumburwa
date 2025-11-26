@@ -22,4 +22,11 @@ export const metadata: Metadata = {
       "Connect with Inkumburwa z'Ibwanacyambwe for performances, workshops, and cultural collaborations across Rwanda and worldwide.",
     url: `${siteUrl}/contact`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Inkumburwa z'Ibwanacyambwe",
+    description:
+      "Reach out to book authentic Rwandan dance performances and cultural experiences for your events.",
+    images: [`${siteUrl}/logo-original.png`],
+  },
 };

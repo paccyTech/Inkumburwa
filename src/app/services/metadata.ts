@@ -22,4 +22,11 @@ export const metadata: Metadata = {
       "Book Inkumburwa z'Ibwanacyambwe for cultural performances, custom productions, and interactive heritage workshops.",
     url: `${siteUrl}/services`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cultural Performance Services | Inkumburwa z'Ibwanacyambwe",
+    description:
+      "Book authentic Rwandan dance performances and cultural experiences for your events worldwide.",
+    images: [`${siteUrl}/logo-original.png`],
+  },
 };
