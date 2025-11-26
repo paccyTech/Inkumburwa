@@ -69,8 +69,8 @@ const content = {
           href: "mailto:media@inkumburwa.com",
         },
         secondary: {
-          label: "+250788992368",
-          href: "tel:+250788992368",
+          label: "+250788992367",
+          href: "tel:+250788992367",
         },
       },
       {
@@ -137,8 +137,8 @@ const content = {
           href: "mailto:media@inkumburwa.com",
         },
         secondary: {
-          label: "+250788992368",
-          href: "tel:+250788992368",
+          label: "+250788992367",
+          href: "tel:+250788992367",
         },
       },
       {
@@ -398,7 +398,7 @@ export default function ContactPageClient() {
                             {index === 1 && (
                               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-lg">
                                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 9.95 0 0121 8.618v6.764a1 9.97 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                 </svg>
                               </div>
                             )}

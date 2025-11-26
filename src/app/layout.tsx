@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Fira_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { FloatingButtons } from "@/components/FloatingButtons";
 import { LocaleProvider } from "@/context/LocaleContext";
 import "./globals.css";
 
@@ -118,6 +119,7 @@ export default function RootLayout({
           <main className="bg-white">
             {children}
           </main>
+          <FloatingButtons />
           <Footer />
         </LocaleProvider>
       </body>
