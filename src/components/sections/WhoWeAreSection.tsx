@@ -18,7 +18,7 @@ const content = {
     slideshow: [
       { src: "/7.jpg", alt: "Traditional Rwandan dancers" },
       { src: "/10.jpg", alt: "Inkumburwa troupe performing on stage" },
-      { src: "/3.jpg", alt: "Cultural performance moment" },
+      { src: "/39.jpg", alt: "Cultural performance moment" },
       { src: "/29.jpeg", alt: "Inkumburwa performer carrying a traditional gourd" },
     ],
     goToSlide: "Go to slide",
@@ -35,7 +35,7 @@ const content = {
     slideshow: [
       { src: "/7.jpg", alt: "Danseurs rwandais traditionnels" },
       { src: "/10.jpg", alt: "La troupe Inkumburwa sur scène" },
-      { src: "/3.jpg", alt: "Moment de performance culturelle" },
+      { src: "/39.jpg", alt: "Moment de performance culturelle" },
       { src: "/29.jpeg", alt: "Artiste d'Inkumburwa portant une calebasse traditionnelle" },
     ],
     goToSlide: "Aller à la diapositive",
