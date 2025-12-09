@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
 import { Calendar, Clock, MapPin, Theater, Ticket, X, Minus, Plus, CreditCard, User, Mail, Phone, MessageSquare } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 
-const events = [] as const;
+const events = ["sampleEvent"] as const;
 
 type EventKey = (typeof events)[number];
 
@@ -59,6 +59,28 @@ export default function EventsPageClient() {
     specialRequests: ''
   });
   const [showBookingModal, setShowBookingModal] = useState(false);
+  const [isHappeningNow, setIsHappeningNow] = useState(false);
+
+  useEffect(() => {
+    const checkEventTime = () => {
+      const now = new Date();
+      const options = { timeZone: 'Africa/Kigali' };
+      const rwandaTime = now.toLocaleString('en-US', options);
+      const rwandaDate = new Date(rwandaTime);
+      
+      // Friday is 5 in getDay() (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+      const isFriday = rwandaDate.getDay() === 5;
+      const isEventTime = rwandaDate.getHours() === 19 && rwandaDate.getMinutes() < 60; // 7:00 PM to 8:00 PM
+      
+      setIsHappeningNow(isFriday && isEventTime);
+    };
+
+    // Check immediately and then every minute
+    checkEventTime();
+    const interval = setInterval(checkEventTime, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const openBookingModal = (eventKey: EventKey) => {
     setSelectedEvent(eventKey);
@@ -107,18 +129,16 @@ export default function EventsPageClient() {
       const [hours, minutes] = timeStr.includes(':') ? timeStr.split(':').map(Number) : [19, 0]; // Default to 7 PM if parsing fails
       date.setHours(hours, minutes, 0, 0);
 
-      // Determine status
+      // Determine status based on current time
+      const now = new Date();
       const eventStart = new Date(date);
-      const eventEnd = new Date(eventStart.getTime() + 2 * 60 * 60 * 1000); // Assume 2 hours duration
-
-      let status: EventStatus;
-      // Debug: force different statuses to test all three
-      if (eventKey === "traditionalConcert") {
+      const eventEnd = new Date(eventStart.getTime() + 2 * 60 * 60 * 1000); // 2 hours duration
+      
+      let status: EventStatus = "upcoming";
+      if (now >= eventStart && now <= eventEnd) {
         status = "happening";
-      } else if (eventKey === "culturalFestival") {
+      } else if (now > eventEnd) {
         status = "ended";
-      } else {
-        status = "upcoming";
       }
 
       return {
@@ -149,7 +169,7 @@ export default function EventsPageClient() {
       case "happening":
         return "HAPPENING NOW";
       case "upcoming":
-        return "UPCOMING";
+        return "EVERY FRIDAY";
       case "ended":
         return "ENDED";
     }
@@ -209,18 +229,25 @@ export default function EventsPageClient() {
                   <div className="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-emerald-200 transform hover:-translate-y-2 hover:scale-[1.02]">
                     
                     {/* Event Image Thumbnail */}
-                    <div className="h-56 relative overflow-hidden rounded-t-3xl group-hover:h-64 transition-all duration-500 ease-out">
-                      <Image
-                        src="/28.jpg"
-                        alt={t(`events.event.${eventKey}.title`)}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+                    <div className="h-96 relative overflow-hidden rounded-t-3xl group-hover:h-[28rem] transition-all duration-500 ease-out bg-white">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src="/event1.png"
+                          alt={t(`events.event.${eventKey}.title`)}
+                          fill
+                          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={status === "upcoming"}
+                        />
+                      </div>
                       {/* Status Badge Overlay */}
                       <div className="absolute top-4 right-4 z-20">
-                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-xl backdrop-blur-sm border border-white/20 ${getStatusColor(status)}`}>
-                          {getStatusText(status)}
+                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-xl backdrop-blur-sm border ${
+                          isHappeningNow 
+                            ? 'bg-emerald-500 text-white border-emerald-400 animate-pulse' 
+                            : `${getStatusColor(status)} border-white/20`
+                        }`}>
+                          {isHappeningNow ? 'Happening Now' : getStatusText(status)}
                         </span>
                       </div>
                       {/* Gradient Overlay */}
@@ -247,69 +274,67 @@ export default function EventsPageClient() {
                             <span className="text-sm font-medium uppercase tracking-wide">Featured Event</span>
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-300">
-                            {t(`events.event.${eventKey}.title`)}
+                            {eventKey === "sampleEvent" ? "Solia Cultural Soirée" : t(`events.event.${eventKey}.title`)}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed line-clamp-2">
-                            {t(`events.event.${eventKey}.description`)}
+                          <p className="text-sm text-gray-600 line-clamp-2">
+                            {eventKey === "sampleEvent" 
+                              ? "Experience the vibrant culture of Rwanda with live performances every Friday evening." 
+                              : t(`events.event.${eventKey}.description`)}
                           </p>
                         </div>
 
-                        {/* Enhanced Event Details */}
-                        <div className="grid grid-cols-3 gap-3 py-3 border-y border-gray-100">
-                          <div className="flex flex-col items-center text-center space-y-1 group/detail">
-                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
-                              <Calendar className="w-4 h-4 text-emerald-600" />
-                            </div>
-                            <div>
-                              <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Date</p>
-                              <p className="text-xs font-semibold text-gray-900 leading-tight">{t(`events.event.${eventKey}.date`)}</p>
-                            </div>
-                          </div>
-                          <div className="flex flex-col items-center text-center space-y-1 group/detail">
+                        <div className="flex flex-col gap-3">
+                          <div className="flex items-center gap-3 group/detail">
                             <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <Clock className="w-4 h-4 text-emerald-600" />
                             </div>
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Time</p>
-                              <p className="text-xs font-semibold text-gray-900 leading-tight">{t(`events.event.${eventKey}.time`)}</p>
+                              <p className="text-xs font-semibold text-gray-900 leading-tight">
+                                {eventKey === "sampleEvent" ? "07:00PM - Every Friday" : t(`events.event.${eventKey}.time`)}
+                              </p>
                             </div>
                           </div>
-                          <div className="flex flex-col items-center text-center space-y-1 group/detail">
+
+                          <div className="flex items-center gap-3 group/detail">
                             <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <MapPin className="w-4 h-4 text-emerald-600" />
                             </div>
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Venue</p>
-                              <p className="text-xs font-semibold text-gray-900 leading-tight">{t(`events.event.${eventKey}.location`)}</p>
+                              <p className="text-xs font-semibold text-gray-900 leading-tight">
+                                {eventKey === "sampleEvent" ? "Solia Pool Bar - Zaria Court Hotel" : t(`events.event.${eventKey}.location`)}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-3 group/detail">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                              <Mail className="w-4 h-4 text-emerald-600" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Email</p>
+                              <a href="mailto:info@zariacourt.com" className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                                {eventKey === "sampleEvent" ? "info@zariacourt.com" : t(`events.event.${eventKey}.email`)}
+                              </a>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-3 group/detail">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                              <Phone className="w-4 h-4 text-emerald-600" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Phone</p>
+                              <a href="tel:0796699087" className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                                {eventKey === "sampleEvent" ? "0796699087" : t(`events.event.${eventKey}.phone`)}
+                              </a>
                             </div>
                           </div>
                         </div>
 
-                        {/* Enhanced Pricing & CTA */}
-                        <div className="flex items-center justify-between pt-3">
-                          <div className="flex items-center gap-3">
-                            <div className={`px-4 py-2 rounded-2xl font-bold text-sm ${
-                              status === "ended" ? "bg-red-100 text-red-700" : "bg-emerald-100 text-emerald-700"
-                            }`}>
-                              {status === "ended" ? "Event Ended" : "Free Entry"}
-                            </div>
-                          </div>
-                          
-                          {status !== "ended" && (
-                            <button
-                              onClick={() => openBookingModal(eventKey)}
-                              className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
-                                status === "happening"
-                                  ? "bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700"
-                                  : "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700"
-                              }`}
-                            >
-                              <Ticket className="w-4 h-4" />
-                              {status === "happening" ? "Join Now" : "Get Tickets"}
-                              <span className="text-base">→</span>
-                            </button>
-                          )}
-                        </div>
+                        {/* Spacing for layout consistency */}
+                        <div className="h-4"></div>
                       </div>
                     </div>
                   </div>
