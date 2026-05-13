@@ -359,7 +359,7 @@ export default function ContactPageClient() {
                       </Link>
 
                       <Link
-                        href="https://www.youtube.com/@inkumbura"
+                        href="https://www.youtube.com/@Itorero_inkumburwa"
                         className="group flex items-center gap-4 rounded-2xl bg-white/10 p-4 backdrop-blur-sm transition-all duration-300 hover:bg-red-500 hover:text-white hover:scale-105"
                         target="_blank"
                         rel="noreferrer"
@@ -371,7 +371,7 @@ export default function ContactPageClient() {
                         </div>
                         <div>
                           <div className="font-semibold">YouTube</div>
-                          <div className="text-sm opacity-80">@inkumbura</div>
+                          <div className="text-sm opacity-80">@Itorero_inkumburwa</div>
                         </div>
                       </Link>
                     </div>
