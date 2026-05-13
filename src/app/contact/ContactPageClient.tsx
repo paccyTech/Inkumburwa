@@ -53,8 +53,8 @@ const content = {
         title: "Book a Performance",
         description: "Let us bring the rhythm of Rwanda to your stage, festival, or celebration.",
         primary: {
-          label: "bookings@inkumburwa.com",
-          href: "mailto:bookings@inkumburwa.com",
+          label: "inkumburwazibwanacyambwe@gmail.com",
+          href: "mailto:inkumburwazibwanacyambwe@gmail.com",
         },
         secondary: {
           label: "+250788992367",
@@ -65,8 +65,8 @@ const content = {
         title: "Media & Partnerships",
         description: "Collaborate on cultural projects, tours, and documentaries celebrating Rwandan heritage.",
         primary: {
-          label: "media@inkumburwa.com",
-          href: "mailto:media@inkumburwa.com",
+          label: "inkumburwazibwanacyambwe@gmail.com",
+          href: "mailto:inkumburwazibwanacyambwe@gmail.com",
         },
         secondary: {
           label: "+250788992367",
@@ -120,8 +120,8 @@ const content = {
         title: "Réserver une performance",
         description: "Nous apportons le rythme du Rwanda sur votre scène, festival ou célébration.",
         primary: {
-          label: "bookings@inkumburwa.com",
-          href: "mailto:bookings@inkumburwa.com",
+          label: "inkumburwazibwanacyambwe@gmail.com",
+          href: "mailto:inkumburwazibwanacyambwe@gmail.com",
         },
         secondary: {
           label: "+250788992367",
@@ -133,8 +133,8 @@ const content = {
         description:
           "Collaborez sur des projets culturels, des tournées et des documentaires célébrant l'héritage rwandais.",
         primary: {
-          label: "media@inkumburwa.com",
-          href: "mailto:media@inkumburwa.com",
+          label: "inkumburwazibwanacyambwe@gmail.com",
+          href: "mailto:inkumburwazibwanacyambwe@gmail.com",
         },
         secondary: {
           label: "+250788992367",
