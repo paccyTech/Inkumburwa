@@ -178,7 +178,7 @@ export function ServicesOverviewSection() {
           </div>
           <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
             <iframe
-              src="https://youtube.com/shorts/kL-n446FCDs?feature=shared"
+              src="https://www.youtube.com/embed/kL-n446FCDs"
               title="Traditional Rwandan Cultural Performance"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
