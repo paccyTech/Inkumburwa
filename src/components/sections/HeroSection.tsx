@@ -36,27 +36,21 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[75vh] overflow-hidden bg-[#10161a] text-white md:min-h-[90vh]">
       <div className="absolute inset-0">
-        {/* Mobile: Static image only */}
-        <div className="relative h-full w-full overflow-hidden md:hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/Home-mobile1.jpg')" }}
-          />
-        </div>
-        {/* Desktop: Video with fallback */}
-        <div className="relative hidden h-full w-full overflow-hidden md:block">
+        {/* Video Background for ALL devices */}
+        <div className="relative h-full w-full overflow-hidden">
           <iframe
-            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             src="https://www.youtube.com/embed/vxc4ymgi3U4?autoplay=1&mute=1&loop=1&playlist=vxc4ymgi3U4&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1&start=7&end=42"
             title={copy.desktopImageAlt}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
             onError={() => {
-              // If desktop video fails, could add fallback here too
-              console.log('Desktop video failed to load');
+              console.log('Video failed to load');
             }}
           />
         </div>
+        
+        {/* Color Overlays (Keep these so the white text is readable!) */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/80 via-emerald-900/65 to-emerald-800/45" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,78,59,0.28),transparent_60%),radial-gradient(circle_at_bottom_right,rgba(4,47,29,0.26),transparent_65%)]" />
       </div>
