@@ -96,7 +96,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    email: "hello@inkumbura.com",
+    email: "inkumburwazibwanacyambwe@gmail.com",
     telephone: "+250788992367",
   },
 };

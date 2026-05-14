@@ -183,7 +183,7 @@ export default function ContactPageClient() {
                   </h2>
                   <div className="w-16 h-1 bg-gradient-to-r from-emerald-500 to-amber-400 rounded-full"></div>
                   <p className="text-lg text-emerald-900/80 leading-relaxed">
-                    Ready to collaborate? Fill out the form below and we'll get back to you within 24 hours.
+                    Ready to collaborate? Fill out the form below and we&aposll get back to you within 24 hours.
                   </p>
                 </div>
               </Reveal>
