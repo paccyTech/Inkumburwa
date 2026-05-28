@@ -40,30 +40,30 @@ const content = {
         image: "/26.jpg",
         highlights: [
           "Full troupe showcases with live drumming",
-          "Traditional storytelling woven into every set",
+          "Intore Dance alongside the Bridegroom upon entrance",
           "Costumes handcrafted to honor heritage",
         ],
       },
       {
-        title: "Girls Dance Kinyarwanda",
+        title: "Gusohora Umugeni",
         description:
-          "Experience the vibrant energy and cultural storytelling of Kinyarwanda girls' dance performances, blending traditional rhythms with youthful passion.",
+          "We bring the beauty of Rwandan tradition to life through authentic Ibihozo performance, emotional bridal entrance songs performed by skilled voices to celebrate the bride's journey with elegance, culture and heartfelt emotion.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
           </svg>
         ),
-        image: "/30.jpeg",
+        image: "/gus.jpg.jpeg",
         highlights: [
-          "Authentic Kinyarwanda dance traditions",
-          "Youthful performers bringing fresh energy",
-          "Cultural narratives through movement",
+          "Authentic Ibihozo",
+          "Traditioonal bridal entrance songs",
+          "Skilled Rwandan vocals and Heartfelt Emotion",
         ],
       },
       {
-        title: "Rwandan Dance Performances",
+        title: "Corporate Event Performances",
         description:
-          "Witness the grace and power of authentic Rwandan dance performances, showcasing the rich cultural heritage and storytelling through movement.",
+          "Elevate your conferences, galas, and professional gatherings with dynamic Rwandan cultural showcases. Our troupe provides a captivating, high-quality entertainment experience that engages attendees and adds a memorable touch of heritage to your professional events.",
         icon: (
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
             <circle cx="12" cy="12" r="10" />
@@ -71,11 +71,11 @@ const content = {
             <path d="M2 12h20" />
           </svg>
         ),
-        image: "/33.jpeg",
+        image: "/corp.jpg.jpeg",
         highlights: [
-          "Authentic Rwandan dance traditions",
-          "Graceful movements and powerful rhythms",
-          "Cultural heritage brought to life",
+          "Tailored entertainment for professional settings",
+          "High-energy, engaging cultural immersion",
+          "Punctual, seamless, and world-class execution",
         ],
       },
       {
