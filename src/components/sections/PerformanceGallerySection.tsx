@@ -32,8 +32,8 @@ const content = {
     } satisfies Record<CategoryId, string>,
     photos: [
       {
-        id: "wedding-chantal-eric",
-        src: "/1.jpg",
+        id: "wedding",
+        src: "/all_pic.jpeg",
         alt: "Bride and groom celebrating with the troupe",
         category: "wedding" as const,
         caption: "Joyful entrance parade for Chantal & Eric",
@@ -41,7 +41,7 @@ const content = {
       },
       {
         id: "corporate-leadership-summit",
-        src: "/39.jpg",
+        src: "/lili_elen.jpeg",
         alt: "Corporate gala with Inkumburwa on stage",
         category: "corporate" as const,
         caption: "Annual leadership summit cultural showcase",
@@ -49,7 +49,7 @@ const content = {
       },
       {
         id: "festival-inganzo-call-response",
-        src: "/8.jpg",
+        src: "/nziza.jpeg",
         alt: "Festival headliner leading the crowd in song",
         category: "festivals" as const,
         caption: "Intore call-and-response at Inganzo Festival",

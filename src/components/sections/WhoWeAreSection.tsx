@@ -16,9 +16,9 @@ const content = {
       { value: "50", label: "Talented Artists" },
     ],
     slideshow: [
-      { src: "/7.jpg", alt: "Traditional Rwandan dancers" },
+      { src: "/ellen.jpeg", alt: "Traditional Rwandan dancers" },
       { src: "/10.jpg", alt: "Inkumburwa troupe performing on stage" },
-      { src: "/39.jpg", alt: "Cultural performance moment" },
+      { src: "/elie_christa.jpeg", alt: "Cultural performance moment" },
       { src: "/29.jpeg", alt: "Inkumburwa performer carrying a traditional gourd" },
     ],
     goToSlide: "Go to slide",
