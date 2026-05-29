@@ -55,8 +55,6 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-crowd-engagement", src: "/26.jpg", category: "festivals" },
       { id: "festival-opening-ceremony", src: "/28.jpg", category: "festivals" },
       { id: "festival-grand-performance", src: "/29.jpeg", category: "festivals" },
-      { id: "corporate-tribute", src: "/34.jpeg", category: "corporate" },
-      { id: "community-outreach", src: "/35.jpeg", category: "corporate" },
       { id: "festival-sunset-show", src: "/36.jpeg", category: "festivals" },
       { id: "festival-grand-finale-2025", src: "/37.jpeg", category: "festivals" },
       { id: "wedding-amasunzu", src: "/amasunzu.jpeg", category: "wedding" },
@@ -193,8 +191,6 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-crowd-engagement", src: "/26.jpg", category: "festivals" },
       { id: "festival-opening-ceremony", src: "/28.jpg", category: "festivals" },
       { id: "festival-grand-performance", src: "/29.jpeg", category: "festivals" },
-      { id: "corporate-tribute", src: "/34.jpeg", category: "corporate" },
-      { id: "community-outreach", src: "/35.jpeg", category: "corporate" },
       { id: "festival-sunset-show", src: "/36.jpeg", category: "festivals" },
       { id: "festival-grand-finale-2025", src: "/37.jpeg", category: "festivals" },
       { id: "wedding-amasunzu", src: "/amasunzu.jpg", category: "wedding" },
@@ -327,13 +323,24 @@ const filterLabels: Record<string, Record<FilterKey, string>> = {
   },
 };
 
+const sortGalleryPhotos = (photos: BasePhoto[]) =>
+  [...photos].sort((a, b) => {
+    const aFileName = (a.src.split("/").pop() ?? "").trim();
+    const bFileName = (b.src.split("/").pop() ?? "").trim();
+    const aStartsWithNumber = /^\d/.test(aFileName);
+    const bStartsWithNumber = /^\d/.test(bFileName);
+
+    if (aStartsWithNumber === bStartsWithNumber) return 0;
+    return aStartsWithNumber ? 1 : -1;
+  });
+
 export default function GalleryPageClient() {
   const { locale } = useLocale();
   const copy = galleryContent[locale] ?? galleryContent.en;
   const labels = filterLabels[locale] ?? filterLabels.en;
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
 
-  const filteredPhotos = copy.basePhotos.filter((photo) =>
+  const filteredPhotos = sortGalleryPhotos(copy.basePhotos).filter((photo) =>
     activeFilter === "all" ? true : photo.category === activeFilter
   );
 
