@@ -180,7 +180,7 @@ export default function EventsPageClient() {
       <PageHero
         title={t("events.title")}
         subtitle={t("events.subtitle")}
-        backgroundImageUrl="/28.jpg"
+        backgroundImageUrl="/amarebe.jpg"
       />
 
       <section className="py-16 md:py-24">
@@ -208,7 +208,7 @@ export default function EventsPageClient() {
                 
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">No Events Yet</h3>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                  We're currently preparing exciting cultural performances and experiences. Check back soon for upcoming events!
+                  We&apos;re currently preparing exciting cultural performances and experiences. Check back soon for upcoming events!
                 </p>
                 
                 <div className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-2xl p-6 border border-emerald-100">
@@ -217,7 +217,7 @@ export default function EventsPageClient() {
                     <span className="text-sm font-semibold text-emerald-800 uppercase tracking-wide">Coming Soon</span>
                   </div>
                   <p className="text-sm text-emerald-700">
-                    When events are available, this is where you'll be able to book your tickets directly through this page.
+                    When events are available, this is where you&apos;ll be able to book your tickets directly through this page.
                   </p>
                 </div>
               </div>
@@ -350,7 +350,7 @@ export default function EventsPageClient() {
                 Ready to Experience Our Culture?
               </h3>
               <p className="text-emerald-100 mb-6 max-w-2xl mx-auto">
-                Join us for unforgettable cultural performances that celebrate Rwanda's rich heritage.
+                Join us for unforgettable cultural performances that celebrate Rwanda&apos;s rich heritage.
               </p>
               <Link
                 href="/contact"

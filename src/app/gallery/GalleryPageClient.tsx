@@ -42,6 +42,8 @@ const galleryContent: Record<string, GalleryCopy> = {
     filterAll: "All moments",
     empty: "No photos available in this category yet. Check back soon!",
     basePhotos: [
+      { id: "wedding-elie-christa", src: "/elie_christa.jpeg", category: "wedding" },
+      { id: "festival-raissa-dja", src: "/raissa_dja.jpeg", category: "festivals" },
       { id: "wedding-intimate-moment", src: "/9.jpg", category: "wedding" },
       { id: "wedding-family-gathering", src: "/10.jpg", category: "wedding" },
       { id: "festival-nightfall-encore", src: "/12.jpg", category: "festivals" },
@@ -53,8 +55,6 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-evening-showcase", src: "/24.jpg", category: "festivals" },
       { id: "festival-drum-circle", src: "/25.jpg", category: "festivals" },
       { id: "festival-crowd-engagement", src: "/26.jpg", category: "festivals" },
-      { id: "festival-opening-ceremony", src: "/28.jpg", category: "festivals" },
-      { id: "festival-grand-performance", src: "/29.jpeg", category: "festivals" },
       { id: "festival-sunset-show", src: "/36.jpeg", category: "festivals" },
       { id: "festival-grand-finale-2025", src: "/37.jpeg", category: "festivals" },
       { id: "wedding-amasunzu", src: "/amasunzu.jpeg", category: "wedding" },
@@ -63,6 +63,16 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-lili-elen", src: "/lili_elen.jpeg", category: "festivals" },
     ],
     photos: {
+      "wedding-elie-christa": {
+        caption: "Elie and Christa wedding celebration",
+        takenAt: "May 2025 · Kigali",
+        alt: "Wedding celebration featuring Elie and Christa",
+      },
+      "festival-raissa-dja": {
+        caption: "Raissa Dja festival performance",
+        takenAt: "May 2025 · Kigali",
+        alt: "Festival performance featuring Raissa Dja",
+      },
       "wedding-intimate-moment": {
         caption: "Intimate wedding moment with traditional music",
         takenAt: "December 2024 · Rubavu",
@@ -117,11 +127,6 @@ const galleryContent: Record<string, GalleryCopy> = {
         caption: "Crowd engagement during festival performance",
         takenAt: "April 2025 · Kigali",
         alt: "Festival crowd actively participating",
-      },
-      "festival-opening-ceremony": {
-        caption: "Festival opening ceremony performance",
-        takenAt: "May 2024 · Kigali",
-        alt: "Opening ceremony with traditional performance",
       },
       "festival-grand-performance": {
         caption: "Grand festival performance showcase",
@@ -178,6 +183,8 @@ const galleryContent: Record<string, GalleryCopy> = {
     filterAll: "Tous les moments",
     empty: "Aucune photo disponible pour cette catégorie. Revenez bientôt !",
     basePhotos: [
+      { id: "wedding-elie-christa", src: "/elie_christa.jpeg", category: "wedding" },
+      { id: "festival-raissa-dja", src: "/raissa_dja.jpeg", category: "festivals" },
       { id: "wedding-intimate-moment", src: "/9.jpg", category: "wedding" },
       { id: "wedding-family-gathering", src: "/10.jpg", category: "wedding" },
       { id: "festival-nightfall-encore", src: "/12.jpg", category: "festivals" },
@@ -189,8 +196,6 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-evening-showcase", src: "/24.jpg", category: "festivals" },
       { id: "festival-drum-circle", src: "/25.jpg", category: "festivals" },
       { id: "festival-crowd-engagement", src: "/26.jpg", category: "festivals" },
-      { id: "festival-opening-ceremony", src: "/28.jpg", category: "festivals" },
-      { id: "festival-grand-performance", src: "/29.jpeg", category: "festivals" },
       { id: "festival-sunset-show", src: "/36.jpeg", category: "festivals" },
       { id: "festival-grand-finale-2025", src: "/37.jpeg", category: "festivals" },
       { id: "wedding-amasunzu", src: "/amasunzu.jpg", category: "wedding" },
@@ -199,6 +204,16 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "festival-lili-elen", src: "/lili_elen.jpg", category: "festivals" },
     ],
     photos: {
+      "wedding-elie-christa": {
+        caption: "Célébration de mariage d'Elie et Christa",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Célébration de mariage avec Elie et Christa",
+      },
+      "festival-raissa-dja": {
+        caption: "Performance de festival de Raissa Dja",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Performance de festival mettant en avant Raissa Dja",
+      },
       "wedding-intimate-moment": {
         caption: "Moment intime de mariage avec musique traditionnelle",
         takenAt: "Décembre 2024 · Rubavu",
@@ -253,11 +268,6 @@ const galleryContent: Record<string, GalleryCopy> = {
         caption: "Engagement de foule pendant la performance de festival",
         takenAt: "Avril 2025 · Kigali",
         alt: "Foule de festival participant activement",
-      },
-      "festival-opening-ceremony": {
-        caption: "Performance de cérémonie d'ouverture de festival",
-        takenAt: "Mai 2024 · Kigali",
-        alt: "Cérémonie d'ouverture avec performance traditionnelle",
       },
       "festival-grand-performance": {
         caption: "Grande vitrine de performance de festival",
@@ -349,7 +359,7 @@ export default function GalleryPageClient() {
       <PageHero
         title={copy.heroTitle}
         subtitle={copy.heroSubtitle}
-        backgroundImageUrl="/28.jpg"
+        backgroundImageUrl="/amarebe.jpg"
         imagePosition="center 45%"
       />
 

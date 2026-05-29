@@ -167,7 +167,7 @@ export default function ContactPageClient() {
         <PageHero
           title={copy.heroTitle}
           subtitle={copy.heroSubtitle}
-          backgroundImageUrl="/28.jpg"
+          backgroundImageUrl="/amarebe.jpg"
           imagePosition="center 35%"
         />
 
