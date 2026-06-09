@@ -7,13 +7,13 @@ const content = {
     quote:
       "Culture is the soul of a nation. Through our dances, we keep the heartbeat of Rwanda alive, sharing our stories, our joy, and our unity with the world.",
     author: "Kayitare Jean",
-    title: "Founder & CEO",
+    title: " ",
   },
   fr: {
     quote:
       "La culture est l'âme d'une nation. Par nos danses, nous gardons le cœur du Rwanda vivant, partageant nos histoires, notre joie et notre unité avec le monde.",
     author: "Kayitare Jean",
-    title: "Fondateur & PDG",
+    title: " ",
   },
 } as const;
 

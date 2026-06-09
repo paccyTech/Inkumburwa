@@ -60,18 +60,24 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "wedding-amasunzu", src: "/amasunzu.jpeg", category: "wedding" },
       { id: "wedding-wararaye", src: "/wararaye.jpeg", category: "wedding" },
       { id: "wedding-ellen", src: "/ellen.jpeg", category: "wedding" },
+      { id: "wedding-ang-lis", src: "/Ang_lis.jpeg", category: "wedding" },
+      { id: "wedding-bla-ins", src: "/Bla_Ins.jpeg", category: "wedding" },
+      { id: "wedding-deb-lis", src: "/Deb_lis.jpeg", category: "wedding" },
+      { id: "wedding-deb-merv", src: "/Deb_Merv.jpeg", category: "wedding" },
+      { id: "wedding-div-sil", src: "/Div_Sil.jpeg", category: "wedding" },
+      { id: "wedding-dui-el", src: "/Dui_El.jpeg", category: "wedding" },
       { id: "festival-lili-elen", src: "/lili_elen.jpeg", category: "festivals" },
     ],
     photos: {
-      "wedding-elie-christa": {
-        caption: "Elie and Christa wedding celebration",
+      "Wedding": {
+        caption: "Wedding celebration",
         takenAt: "May 2025 · Kigali",
-        alt: "Wedding celebration featuring Elie and Christa",
+        alt: "Wedding celebration",
       },
-      "festival-raissa-dja": {
-        caption: "Raissa Dja festival performance",
+      "Festival": {
+        caption: "Festival performance",
         takenAt: "May 2025 · Kigali",
-        alt: "Festival performance featuring Raissa Dja",
+        alt: "Festival performance",
       },
       "wedding-intimate-moment": {
         caption: "Intimate wedding moment with traditional music",
@@ -163,15 +169,45 @@ const galleryContent: Record<string, GalleryCopy> = {
         takenAt: "May 2025 · Kigali",
         alt: "Traditional wararaye dance at wedding celebration",
       },
-      "wedding-ellen": {
-        caption: "Ellen's wedding celebration with Inkumburwa",
+      "wedding-ang-lis": {
+        caption: "Wedding portrait of Ang and Lis",
+        takenAt: "May 2025 · Kigali",
+        alt: "Ang and Lis wedding moment with traditional dress",
+      },
+      "wedding-bla-ins": {
+        caption: "Wedding celebration of Bla and Ins",
+        takenAt: "May 2025 · Kigali",
+        alt: "Bla and Ins wedding ceremony with cultural performance",
+      },
+      "wedding-deb-lis": {
+        caption: "Wedding moment with Deb and Lis",
+        takenAt: "May 2025 · Kigali",
+        alt: "Deb and Lis sharing a wedding celebration moment",
+      },
+      "wedding-deb-merv": {
+        caption: "Wedding celebration of Deb and Merv",
+        takenAt: "May 2025 · Kigali",
+        alt: "Deb and Merv enjoying their wedding performance",
+      },
+      "wedding-div-sil": {
+        caption: "Wedding dance with Div and Sil",
+        takenAt: "May 2025 · Kigali",
+        alt: "Div and Sil in a wedding dance performance",
+      },
+      "wedding-dui-el": {
+        caption: "Wedding celebration of Dui and El",
+        takenAt: "May 2025 · Kigali",
+        alt: "Dui and El taking part in their wedding celebration",
+      },
+      "Wedding Performance": {
+        caption: "Wedding celebration with Inkumburwa",
         takenAt: "May 2025 · Kigali",
         alt: "Wedding ceremony featuring traditional performance",
       },
-      "festival-lili-elen": {
-        caption: "Lili Elen festival performance showcase",
+      "Festival Dance": {
+        caption: "Festival performance showcase",
         takenAt: "May 2025 · Kigali",
-        alt: "Festival performance featuring lili elen traditions",
+        alt: "Festival performances",
       },
     },
   },
@@ -201,6 +237,12 @@ const galleryContent: Record<string, GalleryCopy> = {
       { id: "wedding-amasunzu", src: "/amasunzu.jpg", category: "wedding" },
       { id: "wedding-wararaye", src: "/wararaye.jpg", category: "wedding" },
       { id: "wedding-ellen", src: "/ellen.jpg", category: "wedding" },
+      { id: "wedding-ang-lis", src: "/Ang_lis.jpeg", category: "wedding" },
+      { id: "wedding-bla-ins", src: "/Bla_Ins.jpeg", category: "wedding" },
+      { id: "wedding-deb-lis", src: "/Deb_lis.jpeg", category: "wedding" },
+      { id: "wedding-deb-merv", src: "/Deb_Merv.jpeg", category: "wedding" },
+      { id: "wedding-div-sil", src: "/Div_Sil.jpeg", category: "wedding" },
+      { id: "wedding-dui-el", src: "/Dui_El.jpeg", category: "wedding" },
       { id: "festival-lili-elen", src: "/lili_elen.jpg", category: "festivals" },
     ],
     photos: {
@@ -308,6 +350,36 @@ const galleryContent: Record<string, GalleryCopy> = {
         caption: "Célébration de mariage d'Ellen avec Inkumburwa",
         takenAt: "Mai 2025 · Kigali",
         alt: "Cérémonie de mariage présentant une performance traditionnelle",
+      },
+      "wedding-ang-lis": {
+        caption: "Portrait de mariage d'Ang et Lis",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Ang et Lis lors d'un moment de mariage en tenue traditionnelle",
+      },
+      "wedding-bla-ins": {
+        caption: "Célébration de mariage de Bla et Ins",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Bla et Ins lors d'une cérémonie de mariage culturelle",
+      },
+      "wedding-deb-lis": {
+        caption: "Moment de mariage avec Deb et Lis",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Deb et Lis partageant un instant de célébration de mariage",
+      },
+      "wedding-deb-merv": {
+        caption: "Célébration de mariage de Deb et Merv",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Deb et Merv profitant de leur cérémonie de mariage",
+      },
+      "wedding-div-sil": {
+        caption: "Danse de mariage avec Div et Sil",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Div et Sil dans une performance de mariage",
+      },
+      "wedding-dui-el": {
+        caption: "Célébration de mariage de Dui et El",
+        takenAt: "Mai 2025 · Kigali",
+        alt: "Dui et El participant à leur fête de mariage",
       },
       "festival-lili-elen": {
         caption: "Vitrine de performance du festival Lili Elen",
