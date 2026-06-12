@@ -36,18 +36,21 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[75vh] overflow-hidden bg-[#10161a] text-white md:min-h-[90vh]">
       <div className="absolute inset-0">
-        {/* Video Background for ALL devices */}
-        <div className="relative h-full w-full overflow-hidden">
-          <iframe
-            className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            src="https://www.youtube.com/embed/vxc4ymgi3U4?autoplay=1&mute=1&loop=1&playlist=vxc4ymgi3U4&controls=0&rel=0&showinfo=0&modestbranding=1&playsinline=1&start=7&end=42"
-            title={copy.desktopImageAlt}
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            onError={() => {
-              console.log('Video failed to load');
-            }}
-          />
+        
+        {/* Optimized Cloudinary Video Background */}
+        <div className="relative h-full w-full overflow-hidden bg-[#10161a]">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+          >
+            <source 
+              src="https://res.cloudinary.com/dg55h2o1u/video/upload/q_auto,f_auto/v1781282533/bgrd_video_s4xwde.mp4" 
+              type="video/mp4" 
+            />
+          </video>
         </div>
         
         {/* Color Overlays (Keep these so the white text is readable!) */}
