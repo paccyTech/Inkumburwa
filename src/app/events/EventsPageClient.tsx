@@ -8,7 +8,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 
-const events = ["sampleEvent"] as const;
+const events = [] as const;
 
 type EventKey = (typeof events)[number];
 

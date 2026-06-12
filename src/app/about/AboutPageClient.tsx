@@ -181,15 +181,15 @@ const content = {
 
 const portraitGallery = [
   "/13.jpg",
-  "/14.jpg",
-  "/15.jpg",
-  "/16.jpg",
+  "/raissa_dja.jpeg",
+  "/Ang_lis.jpeg",
+  "/Jul_Pr.jpeg",
   "/17.jpg",
-  "/18.jpg",
-  "/19.jpg",
-  "/20.jpg",
+  "/ellen.jpeg",
+  "/elie_christa.jpeg",
+  "/Bla_Ins.jpeg",
   "/21.jpg",
-  "/22.jpg",
+  "/Deb_Merv.jpeg",
   "/23.jpg",
 ];
 
@@ -288,7 +288,7 @@ export default function AboutPageClient() {
               <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-emerald-900/20">
                 <div className="relative h-[600px]">
                   <Image
-                    src="/11.jpg"
+                    src="/36.jpeg"
                     alt="Inkumburwa troupe rehearsing"
                     fill
                     className="object-cover transition duration-700 hover:scale-105"
