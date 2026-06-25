@@ -67,30 +67,7 @@ const content = {
     portraitAltPrefix: "Inkumburwa portrait",
     portraitPrevious: "Previous portrait",
     portraitNext: "Next portrait",
-    executiveLabel: "Executive Committee",
-    executiveHeading: "Leadership Guiding the Troupe Forward",
-    executiveDescription:
-      "Our executive committee blends artistic mastery, cultural stewardship, and operational excellence to bring every performance to life.",
-    executiveMembers: [
-      {
-        name: "KAYITARE Jean",
-        role: "Managing Director",
-        bio: "Guides the troupe's strategic vision and international partnerships while safeguarding cultural authenticity.",
-        image: "/kayitare.jpeg",
-      },
-      {
-        name: "UMULISA Ines",
-        role: "General Secretary",
-        bio: "Coordinates education programs, workshops, and outreach initiatives with schools and cultural partners.",
-        image: "/ines.jpeg",
-      },
-      {
-        name: "MUVUNYI Emile",
-        role: "President",
-        bio: "Oversees logistics, touring schedules, and production operations for local and international showcases.",
-        image: "/emile.jpeg",
-      },
-    ],
+
   },
   fr: {
     heroTitle: "À propos d'Inkumburwa z'Ibwanacyambwe",
@@ -152,30 +129,7 @@ const content = {
     portraitAltPrefix: "Portrait Inkumburwa",
     portraitPrevious: "Portrait précédent",
     portraitNext: "Portrait suivant",
-    executiveLabel: "Comité exécutif",
-    executiveHeading: "Une direction qui guide la troupe",
-    executiveDescription:
-      "Notre comité exécutif allie maîtrise artistique, préservation culturelle et excellence opérationnelle pour donner vie à chaque spectacle.",
-    executiveMembers: [
-      {
-        name: "KAYITARE Jean",
-        role: "Directeur Général",
-        bio: "Oriente la vision stratégique de la troupe et les partenariats internationaux tout en protégeant l'authenticité culturelle.",
-        image: "/kayitare.jpeg",
-      },
-      {
-        name: "UMULISA Ines",
-        role: "Secrétaire Générale",
-        bio: "Coordonne les programmes éducatifs, ateliers et actions de sensibilisation avec les écoles et partenaires culturels.",
-        image: "/ines.jpeg",
-      },
-      {
-        name: "MUVUNYI Emile",
-        role: "Président",
-        bio: "Supervise la logistique, les calendriers de tournée et la production des représentations locales et internationales.",
-        image: "/emile.jpeg",
-      },
-    ],
+
   },
 } as const;
 
@@ -447,66 +401,7 @@ export default function AboutPageClient() {
           </div>
         </section>
 
-        {/* Executive Team Section */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-white to-emerald-50/50"></div>
-          <div className="relative mx-auto max-w-7xl px-6 py-24">
-            <Reveal className="text-center space-y-6 mb-16">
-              <div className="space-y-4">
-                <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-amber-100 text-sm font-semibold uppercase tracking-wider text-amber-800">
-                  {copy.executiveLabel}
-                </span>
-                <h2 className="text-4xl font-bold tracking-tight text-emerald-950 sm:text-5xl">
-                  {copy.executiveHeading}
-                </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-emerald-500 to-amber-400 rounded-full mx-auto"></div>
-              </div>
-              <p className="text-lg text-emerald-900/80 max-w-3xl mx-auto leading-relaxed">
-                {copy.executiveDescription}
-              </p>
-            </Reveal>
 
-            <div className="flex justify-center">
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl">
-                {copy.executiveMembers.map((member, index) => (
-                  <Reveal key={`${member.name}-${index}`} delay={index * 120}>
-                    <div className="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-emerald-900/20 transition-all duration-500 hover:shadow-3xl hover:shadow-emerald-900/30 hover:-translate-y-2 w-full max-w-[400px]">
-                      <div className="relative h-[380px] overflow-hidden">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition duration-700 group-hover:scale-105"
-                          sizes="(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/70 via-emerald-950/30 to-transparent" />
-                        <div className="absolute inset-0 flex items-end justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/60 to-transparent">
-                          <div className="text-center text-white">
-                            <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
-                            <p className="text-md text-emerald-300 font-medium">{member.role}</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="p-8 space-y-4 text-center">
-                        <div>
-                          <h3 className="text-xl font-bold text-emerald-950 group-hover:text-emerald-800 transition-colors">
-                            {member.name}
-                          </h3>
-                          <p className="text-sm uppercase tracking-wider font-semibold text-emerald-600 mt-2">
-                            {member.role}
-                          </p>
-                        </div>
-                        <p className="text-base leading-relaxed text-emerald-900/80">
-                          {member.bio}
-                        </p>
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
