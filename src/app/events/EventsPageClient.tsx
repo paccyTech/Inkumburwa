@@ -302,50 +302,54 @@ export default function EventsPageClient() {
                           </p>
                         </div>
 
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 w-full">
+                          {/* Time */}
                           <div className="flex items-center gap-3 group/detail">
-                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <Clock className="w-4 h-4 text-emerald-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Time</p>
-                              <p className="text-xs font-semibold text-gray-900 leading-tight">
+                              <p className="text-xs font-semibold text-gray-900 leading-tight truncate">
                                 {t(`events.event.${eventKey}.time`)}
                               </p>
                             </div>
                           </div>
 
+                          {/* Venue */}
                           <div className="flex items-center gap-3 group/detail">
-                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <MapPin className="w-4 h-4 text-emerald-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Venue</p>
-                              <p className="text-xs font-semibold text-gray-900 leading-tight">
+                              <p className="text-xs font-semibold text-gray-900 leading-tight truncate">
                                 {t(`events.event.${eventKey}.location`)}
                               </p>
                             </div>
                           </div>
 
+                          {/* Email (The Culprit - Now Fixed!) */}
                           <div className="flex items-center gap-3 group/detail">
-                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <Mail className="w-4 h-4 text-emerald-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Email</p>
-                              <a href={`mailto:${t(`events.event.${eventKey}.email`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                              <a href={`mailto:${t(`events.event.${eventKey}.email`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline break-all block">
                                 {t(`events.event.${eventKey}.email`)}
                               </a>
                             </div>
                           </div>
 
+                          {/* Phone */}
                           <div className="flex items-center gap-3 group/detail">
-                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center group-hover/detail:bg-emerald-100 transition-colors duration-200">
+                            <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 group-hover/detail:bg-emerald-100 transition-colors duration-200">
                               <Phone className="w-4 h-4 text-emerald-600" />
                             </div>
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Phone</p>
-                              <a href={`tel:${t(`events.event.${eventKey}.phone`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                              <a href={`tel:${t(`events.event.${eventKey}.phone`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline block truncate">
                                 {t(`events.event.${eventKey}.phone`)}
                               </a>
                             </div>
