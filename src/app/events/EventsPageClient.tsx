@@ -8,7 +8,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 
-const events = [] as const;
+const events = ["kwibohoraCulturalNight"] as const;
 
 type EventKey = (typeof events)[number];
 
@@ -47,6 +47,37 @@ const ticketTypes: TicketType[] = [
     description: "Special group pricing"
   }
 ];
+
+const getEventImageSrc = (eventKey: string) => {
+  if (eventKey === "kwibohoraCulturalNight") {
+    return "/Event2.jpeg";
+  }
+
+  return "/event1.png";
+};
+
+const parseEventTime = (timeStr: string) => {
+  const normalized = timeStr.trim().toLowerCase();
+  const match = normalized.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/);
+
+  if (!match) {
+    return { hours: 19, minutes: 0 };
+  }
+
+  let hours = Number(match[1]);
+  const minutes = Number(match[2] ?? 0);
+  const meridiem = match[3];
+
+  if (meridiem === "pm" && hours < 12) {
+    hours += 12;
+  }
+
+  if (meridiem === "am" && hours === 12) {
+    hours = 0;
+  }
+
+  return { hours, minutes };
+};
 
 export default function EventsPageClient() {
   const { t } = useLocale();
@@ -126,7 +157,7 @@ export default function EventsPageClient() {
       const date = new Date(dateStr);
 
       // Parse time and add to date
-      const [hours, minutes] = timeStr.includes(':') ? timeStr.split(':').map(Number) : [19, 0]; // Default to 7 PM if parsing fails
+      const { hours, minutes } = parseEventTime(timeStr);
       date.setHours(hours, minutes, 0, 0);
 
       // Determine status based on current time
@@ -232,23 +263,13 @@ export default function EventsPageClient() {
                     <div className="h-96 relative overflow-hidden rounded-t-3xl group-hover:h-[28rem] transition-all duration-500 ease-out bg-white">
                       <div className="relative w-full h-full">
                         <Image
-                          src="/event1.png"
+                          src={getEventImageSrc(eventKey)}
                           alt={t(`events.event.${eventKey}.title`)}
                           fill
                           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           priority={status === "upcoming"}
                         />
-                      </div>
-                      {/* Status Badge Overlay */}
-                      <div className="absolute top-4 right-4 z-20">
-                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-xl backdrop-blur-sm border ${
-                          isHappeningNow 
-                            ? 'bg-emerald-500 text-white border-emerald-400 animate-pulse' 
-                            : `${getStatusColor(status)} border-white/20`
-                        }`}>
-                          {isHappeningNow ? 'Happening Now' : getStatusText(status)}
-                        </span>
                       </div>
                       {/* Gradient Overlay */}
                       <div className={`absolute inset-0 bg-gradient-to-t ${
@@ -274,12 +295,10 @@ export default function EventsPageClient() {
                             <span className="text-sm font-medium uppercase tracking-wide">Featured Event</span>
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-300">
-                            {eventKey === "sampleEvent" ? "Solia Cultural Soirée" : t(`events.event.${eventKey}.title`)}
+                            {t(`events.event.${eventKey}.title`)}
                           </h3>
                           <p className="text-sm text-gray-600 line-clamp-2">
-                            {eventKey === "sampleEvent" 
-                              ? "Experience the vibrant culture of Rwanda with live performances every Friday evening." 
-                              : t(`events.event.${eventKey}.description`)}
+                            {t(`events.event.${eventKey}.description`)}
                           </p>
                         </div>
 
@@ -291,7 +310,7 @@ export default function EventsPageClient() {
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Time</p>
                               <p className="text-xs font-semibold text-gray-900 leading-tight">
-                                {eventKey === "sampleEvent" ? "07:00PM - Every Friday" : t(`events.event.${eventKey}.time`)}
+                                {t(`events.event.${eventKey}.time`)}
                               </p>
                             </div>
                           </div>
@@ -303,7 +322,7 @@ export default function EventsPageClient() {
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Venue</p>
                               <p className="text-xs font-semibold text-gray-900 leading-tight">
-                                {eventKey === "sampleEvent" ? "Solia Pool Bar - Zaria Court Hotel" : t(`events.event.${eventKey}.location`)}
+                                {t(`events.event.${eventKey}.location`)}
                               </p>
                             </div>
                           </div>
@@ -314,8 +333,8 @@ export default function EventsPageClient() {
                             </div>
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Email</p>
-                              <a href="mailto:info@zariacourt.com" className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
-                                {eventKey === "sampleEvent" ? "info@zariacourt.com" : t(`events.event.${eventKey}.email`)}
+                              <a href={`mailto:${t(`events.event.${eventKey}.email`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                                {t(`events.event.${eventKey}.email`)}
                               </a>
                             </div>
                           </div>
@@ -326,8 +345,8 @@ export default function EventsPageClient() {
                             </div>
                             <div>
                               <p className="text-xs text-emerald-600 font-medium uppercase tracking-wide">Phone</p>
-                              <a href="tel:0796699087" className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
-                                {eventKey === "sampleEvent" ? "0796699087" : t(`events.event.${eventKey}.phone`)}
+                              <a href={`tel:${t(`events.event.${eventKey}.phone`)}`} className="text-xs font-semibold text-gray-900 leading-tight hover:underline">
+                                {t(`events.event.${eventKey}.phone`)}
                               </a>
                             </div>
                           </div>
