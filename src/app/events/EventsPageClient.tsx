@@ -8,7 +8,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { useLocale } from "@/context/LocaleContext";
 
-const events = ["kwibohoraCulturalNight"] as const;
+const events = [] as const;
 
 type EventKey = (typeof events)[number];
 
@@ -48,11 +48,7 @@ const ticketTypes: TicketType[] = [
   }
 ];
 
-const getEventImageSrc = (eventKey: string) => {
-  if (eventKey === "kwibohoraCulturalNight") {
-    return "/Event2.jpeg";
-  }
-
+const getEventImageSrc = (_eventKey?: string) => {
   return "/event1.png";
 };
 
